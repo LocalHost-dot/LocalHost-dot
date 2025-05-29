@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Wakati Itusile USA, Texas Worship Center</title>
+    <meta name="description" content="Support Wakati Itusile USA, Texas Worship Center through online donations and learn about our mission and ministry.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=demo_paypal_client_id&currency=USD&intent=capture"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': 'linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                            <img src="../images/CCDM LOGO PDF-1.jpg" alt="Church Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="donate.html" class="nav-link active bg-primary-600 text-white px-4 py-2 rounded-lg">Donate</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden p-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition-all duration-300 hover:scale-105 shadow-sm">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="nav-link-mobile">Home</a>
+                    <a href="about.html" class="nav-link-mobile">About</a>
+                    <a href="services.html" class="nav-link-mobile">Services</a>
+                    <a href="events.html" class="nav-link-mobile">Events</a>
+                    <a href="contact.html" class="nav-link-mobile">Contact</a>
+                    <a href="donate.html" class="nav-link-mobile active bg-primary-600 text-white px-4 py-2 rounded-lg text-center">Donate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-primary-900 to-indigo-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-blue-600/20"></div>
+            <div class="absolute inset-0 bg-hero-pattern"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-16 h-16 bg-primary-500/10 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-16 w-12 h-12 bg-blue-500/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center relative z-10">
+            <div class="space-y-8 fade-in">
+                <!-- Badge -->
+                <div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white/90 font-medium shadow-lg">
+                    <i class="fas fa-heart text-amber-400 mr-2"></i>
+                    Support Our Mission
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="font-display font-black text-6xl md:text-7xl lg:text-8xl leading-tight text-white">
+                    Give
+                    <span class="block bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
+                        Generously
+                    </span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
+                    Your generosity helps us <span class="inline-block font-semibold bg-gradient-to-r from-amber-300 to-yellow-200 bg-clip-text text-transparent">serve our community</span> and spread God's love. 
+                    Thank you for <span class="inline-block font-semibold bg-gradient-to-r from-yellow-200 to-amber-400 bg-clip-text text-transparent">partnering with us</span> in ministry at Wakati Itusile USA, Texas Worship Center.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/paypal.js"></script>
+</body>
+</html>
+    <!-- Giving Impact -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Your Impact
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    See how your generous giving makes a difference in our community and beyond
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Community Outreach -->
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hands-helping text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Community Outreach</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Supporting local families with food assistance, shelter support, and emergency relief programs.
+                    </p>
+                </div>
+                
+                <!-- Ministry Programs -->
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Ministry Programs</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Funding youth ministries, Bible studies, worship services, and spiritual growth programs.
+                    </p>
+                </div>
+                
+                <!-- Global Missions -->
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-globe text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Global Missions</h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Supporting missionaries and building projects that spread the Gospel worldwide.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Ways to Give
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Choose the giving method that works best for you
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Online Giving -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg fade-in">
+                    <h3 class="font-serif text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                        <i class="fas fa-credit-card text-primary-600 dark:text-primary-400 mr-3"></i>
+                        Give Online
+                    </h3>
+                    
+                    <div class="mb-8">
+                        <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-4">Select Donation Amount</h4>
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <button class="donation-amount-btn bg-gray-100 dark:bg-gray-700 hover:bg-primary-100 dark:hover:bg-primary-900 border border-gray-300 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 text-gray-900 dark:text-white py-3 rounded-lg transition-colors" data-amount="25">
+                                $25
+                            </button>
+                            <button class="donation-amount-btn bg-gray-100 dark:bg-gray-700 hover:bg-primary-100 dark:hover:bg-primary-900 border border-gray-300 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 text-gray-900 dark:text-white py-3 rounded-lg transition-colors" data-amount="50">
+                                $50
+                            </button>
+                            <button class="donation-amount-btn bg-gray-100 dark:bg-gray-700 hover:bg-primary-100 dark:hover:bg-primary-900 border border-gray-300 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 text-gray-900 dark:text-white py-3 rounded-lg transition-colors" data-amount="100">
+                                $100
+                            </button>
+                            <button class="donation-amount-btn bg-gray-100 dark:bg-gray-700 hover:bg-primary-100 dark:hover:bg-primary-900 border border-gray-300 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 text-gray-900 dark:text-white py-3 rounded-lg transition-colors" data-amount="250">
+                                $250
+                            </button>
+                            <button class="donation-amount-btn bg-gray-100 dark:bg-gray-700 hover:bg-primary-100 dark:hover:bg-primary-900 border border-gray-300 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 text-gray-900 dark:text-white py-3 rounded-lg transition-colors" data-amount="500">
+                                $500
+                            </button>
+                            <button class="donation-amount-btn bg-gray-100 dark:bg-gray-700 hover:bg-primary-100 dark:hover:bg-primary-900 border border-gray-300 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 text-gray-900 dark:text-white py-3 rounded-lg transition-colors" data-amount="other">
+                                Other
+                            </button>
+                        </div>
+                        <div id="custom-amount-input" class="hidden">
+                            <label for="custom-amount" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Custom Amount
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-3 text-gray-500 dark:text-gray-400">$</span>
+                                <input type="number" id="custom-amount" min="1" step="0.01" placeholder="0.00"
+                                       class="w-full pl-8 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-4">Designation (Optional)</h4>
+                        <select id="donation-designation" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                            <option value="general">General Fund</option>
+                            <option value="building">Building Fund</option>
+                            <option value="missions">Missions</option>
+                            <option value="youth">Youth Ministry</option>
+                            <option value="outreach">Community Outreach</option>
+                            <option value="music">Music Ministry</option>
+                        </select>
+                    </div>
+                    
+                    <!-- PayPal Button Container -->
+                    <div id="paypal-button-container" class="mb-6"></div>
+                    
+                    <div class="text-center text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-lock mr-2"></i>
+                        Secure SSL Encrypted Transaction
+                    </div>
+                </div>
+                
+                <!-- Other Giving Methods -->
+                <div class="space-y-8">
+                    <!-- Bank Transfer -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg fade-in">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <i class="fas fa-university text-primary-600 dark:text-primary-400 mr-3"></i>
+                            Bank Transfer
+                        </h3>
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <div class="font-semibold text-gray-900 dark:text-white">Bank Name</div>
+                                    <div class="text-gray-600 dark:text-gray-300">First National Bank</div>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900 dark:text-white">Account Name</div>
+                                    <div class="text-gray-600 dark:text-gray-300">Grace Community Church</div>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900 dark:text-white">Account Number</div>
+                                    <div class="text-gray-600 dark:text-gray-300">123-456-7890</div>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900 dark:text-white">Routing Number</div>
+                                    <div class="text-gray-600 dark:text-gray-300">987654321</div>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900 dark:text-white">Swift Code</div>
+                                    <div class="text-gray-600 dark:text-gray-300">FNBKUS33</div>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900 dark:text-white">Reference</div>
+                                    <div class="text-gray-600 dark:text-gray-300">Your Name + "Donation"</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                            Please include your name and "Donation" in the reference field for proper record keeping.
+                        </p>
+                    </div>
+                    
+                    <!-- Check/Cash -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg fade-in">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <i class="fas fa-money-check text-primary-600 dark:text-primary-400 mr-3"></i>
+                            Check or Cash
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Sunday Service</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                    Place your offering in the donation baskets during our Sunday service or drop it in the offering box.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Mail Your Gift</h4>
+                                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                                    <div class="text-sm">
+                                        <div class="font-semibold text-gray-900 dark:text-white">Grace Community Church</div>
+                                        <div class="text-gray-600 dark:text-gray-300">123 Faith Street</div>
+                                        <div class="text-gray-600 dark:text-gray-300">Hope City, HC 12345</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Check Instructions</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                    Make checks payable to "Grace Community Church" and include designation in the memo line if desired.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tithing Information -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                        Biblical Giving
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300">
+                        Understanding God's heart for generous giving
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <h3 class="font-serif text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                            Why We Give
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-heart text-primary-600 dark:text-primary-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Expression of Worship</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Giving is an act of worship that honors God and acknowledges His provision in our lives.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-hands text-primary-600 dark:text-primary-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Partnership in Ministry</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Your gifts enable us to serve our community and support global missions.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-seedling text-primary-600 dark:text-primary-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Spiritual Growth</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Generous giving develops our character and deepens our trust in God.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-8 fade-in">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                            Scripture on Giving
+                        </h3>
+                        <div class="space-y-6">
+                            <blockquote class="text-center">
+                                <p class="text-lg italic text-gray-700 dark:text-gray-300 mb-3">
+                                    "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+                                </p>
+                                <cite class="text-primary-600 dark:text-primary-400 font-semibold">2 Corinthians 9:7</cite>
+                            </blockquote>
+                            
+                            <blockquote class="text-center">
+                                <p class="text-lg italic text-gray-700 dark:text-gray-300 mb-3">
+                                    "Bring the whole tithe into the storehouse, that there may be food in my house."
+                                </p>
+                                <cite class="text-primary-600 dark:text-primary-400 font-semibold">Malachi 3:10</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Financial Transparency
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    We believe in being good stewards of your gifts and maintaining full transparency
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg fade-in">
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                        How Funds Are Used
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-500 rounded mr-3"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Ministry & Operations</span>
+                            </div>
+                            <span class="font-semibold text-gray-900 dark:text-white">45%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded mr-3"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Community Outreach</span>
+                            </div>
+                            <span class="font-semibold text-gray-900 dark:text-white">25%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-yellow-500 rounded mr-3"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Missions Support</span>
+                            </div>
+                            <span class="font-semibold text-gray-900 dark:text-white">20%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-purple-500 rounded mr-3"></div>
+                                <span class="text-gray-700 dark:text-gray-300">Building & Maintenance</span>
+                            </div>
+                            <span class="font-semibold text-gray-900 dark:text-white">10%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg fade-in">
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                        Annual Reports
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        We publish detailed annual financial reports to ensure transparency and accountability in our stewardship.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-file-pdf text-red-500 mr-3"></i>
+                                <span class="text-gray-900 dark:text-white font-semibold">2023 Annual Report</span>
+                            </div>
+                            <i class="fas fa-download text-gray-400"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            <div class="flex items-center">
+                                <i class="fas fa-file-pdf text-red-500 mr-3"></i>
+                                <span class="text-gray-900 dark:text-white font-semibold">2022 Annual Report</span>
+                            </div>
+                            <i class="fas fa-download text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="py-20 bg-primary-600 dark:bg-primary-800">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 fade-in">
+            <h2 class="ffont-display font-bold text-5xl text-gray-900 mb-6 text-center text-white mb-6">
+                Thank You for Your Generosity
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                Your faithful giving enables us to fulfill our mission and serve our community. We are grateful for your partnership in ministry.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                    Questions About Giving?
+                </a>
+                <a href="about.html" class="bg-primary-700 text-white px-8 py-4 rounded-lg text-lg font-semibold border border-primary-500 hover:bg-primary-800 transition-all duration-300 transform hover:scale-105">
+                    Learn About Our Mission
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <!-- Church Info -->
+<div>
+    <div class="flex items-center space-x-2 mb-6">
+        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+    </div>
+    <p class="text-gray-300 mb-4">
+        A place where faith comes alive and community thrives.
+    </p>
+    <div class="flex space-x-4">
+        <a href="#" class="social-link">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="events.html" class="footer-link">Events</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Times -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Service Times</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>Sunday Service: 11:00 AM</li>
+                        <li>Bible Study: Mon 7:30 PM</li>
+                        <li>Prayer Meeting: Wed 7:30 PM</li>
+                        <li>Power Night: Fri 10:00 PM</li>
+                    </ul>
+                </div>
+                
+                 <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary-400"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                            info@ccdmtexas.org
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 C. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/paypal.js"></script>
+</body>
+</html>

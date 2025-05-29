@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Wakati Itusile USA, Texas Worship Center</title>
+    <meta name="description" content="Discover upcoming events and past activities at Wakati Itusile USA, Texas Worship Center.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': 'linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                            <img src="../images/CCDM LOGO PDF-1.jpg" alt="Church Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="events.html" class="nav-link active">Events</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="donate.html" class="nav-link bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">Donate</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden p-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition-all duration-300 hover:scale-105 shadow-sm">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="nav-link-mobile">Home</a>
+                    <a href="about.html" class="nav-link-mobile">About</a>
+                    <a href="services.html" class="nav-link-mobile">Services</a>
+                    <a href="events.html" class="nav-link-mobile active">Events</a>
+                    <a href="contact.html" class="nav-link-mobile">Contact</a>
+                    <a href="donate.html" class="nav-link-mobile bg-primary-600 text-white px-4 py-2 rounded-lg text-center">Donate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-primary-900 to-indigo-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-blue-600/20"></div>
+            <div class="absolute inset-0 bg-hero-pattern"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-16 h-16 bg-primary-500/10 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-16 w-12 h-12 bg-blue-500/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center relative z-10">
+            <div class="space-y-8 fade-in">
+                <!-- Badge -->
+                <div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white/90 font-medium shadow-lg">
+                    <i class="fas fa-calendar text-red-400 mr-2"></i>
+                    Upcoming Events
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="font-display font-black text-6xl md:text-7xl lg:text-8xl leading-tight text-white">
+                    Church
+                    <span class="block bg-gradient-to-r from-green-500 via-lime-400 to-emerald-600 bg-clip-text text-transparent">
+                        Events
+                    </span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
+                    Join us for <span class="inline-block font-semibold bg-gradient-to-r from-green-300 to-lime-300 bg-clip-text text-transparent">fellowship</span>, worship, and 
+                    <span class="inline-block font-semibold bg-gradient-to-r from-lime-300 to-green-400 bg-clip-text text-transparent">community</span> building events throughout the year at Wakati Itusile USA, Texas Worship Center
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+</body>
+</html>
+
+
+    <!-- Event Filters -->
+    <section class="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 fade-in">
+                <button class="event-filter-btn active bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors" data-filter="all">
+                    All Events
+                </button>
+                <button class="event-filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="upcoming">
+                    Upcoming
+                </button>
+                <button class="event-filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="worship">
+                    Worship
+                </button>
+                <button class="event-filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="fellowship">
+                    Fellowship
+                </button>
+                <button class="event-filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="service">
+                    Service
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Upcoming Event -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Featured Event
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">Don't miss our next special gathering</p>
+            </div>
+            
+           <div class="max-w-4xl mx-auto">
+            <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-2xl fade-in">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="../images/Pilgrimage_to_jordan_&_israel.jpg" 
+                             alt="Country Flag" 
+                             class="w-full h-64 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">SPECIAL EVENT</div>
+                            <h3 class="font-serif text-3xl font-bold text-gray-900 dark:text-white mb-4">Pilgrimage to Israel & Jordan</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                Join us for a Miraculous Pilgrimage to Israel & Jordan, Visit the Holy sites Such Mount Zion, Garden Tomb, Upper Room & Rekindle your Fire & Passion for Jesus.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-calendar-alt text-primary-600 dark:text-primary-400 mr-3"></i>
+                                    <span>September 24, 2025</span>
+                                </div>
+                                <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-clock text-primary-600 dark:text-primary-400 mr-3"></i>
+                                    <span>00:00 PM - 00:00 PM</span>
+                                </div>
+                                <div class="flex items-center text-gray-600 dark:text-gray-300">
+                                    <i class="fas fa-map-marker-alt text-primary-600 dark:text-primary-400 mr-3"></i>
+                                    <span>Main Sanctuary</span>
+                                </div>
+                            </div>
+                            <button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Calendar -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Past Events
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Relive and join us for these past events and activities
+                </p>
+            </div>
+            
+            <!-- Events Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
+    <div class="relative">
+        <img src="../images/the_God_of.jpg" 
+             alt="Worship Night" 
+             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            22nd-25th May, 2025
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">3 Years Annivasary</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">The God of all Possibilities</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Welcome All to Our Special 3 Years Annivasary Program.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <span><i class="fas fa-clock mr-1"></i> 7:30 PM</span>
+                            <span><i class="fas fa-users mr-1"></i> All Welcome</span>
+                        </div>
+                        <button class="w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white py-2 rounded-lg transition-colors event-details-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
+    <div class="relative">
+        <img src="../images/Comanding_the_month.jpg" 
+             alt="Worship Night" 
+             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            1st 3 Days of the Month
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-green-600 dark:text-green-400 font-semibold mb-2">Word Healing Salvation</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Commanding the Month</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Join us for Every 1st 3 Days of the Month, for Fresh Word Healing & Salvation to run with Throughout.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <span><i class="fas fa-clock mr-1"></i> 12:30 PM</span>
+                            <span><i class="fas fa-fire mr-1"></i> Power</span>
+                        </div>
+                        <button class="w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white py-2 rounded-lg transition-colors event-details-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
+    <div class="relative">
+        <img src="../images/Night_of_hyms.jpg" 
+             alt="Worship Night" 
+             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            12th Oct. 2024
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-orange-600 dark:text-orange-400 font-semibold mb-2">COMMUNITY SERVICE</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Night of hymns</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            FEATURING: Hymns, Worship, Praise, Word, & Salvation.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <span><i class="fas fa-clock mr-1"></i> 7:00 PM - 9PM CST </span>
+                            <span><i class="fas fa-music mr-1"></i> Musical</span>
+                        </div>
+                        <button class="w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white py-2 rounded-lg transition-colors event-details-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
+    <div class="relative">
+        <img src="../images/SuperSunday.jpg" 
+             alt="Worship Night" 
+             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Jul 28
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-purple-600 dark:text-purple-400 font-semibold mb-2">Super Sunday</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Goodness And Mercy</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Word, Healing, Prophecy & Deliverance.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <span><i class="fas fa-clock mr-1"></i> 11:00 AM</span>
+                            <span><i class="fas fa-heart mr-1"></i> All is Welcome</span>
+                        </div>
+                        <button class="w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white py-2 rounded-lg transition-colors event-details-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Event 5 -->
+                <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
+    <div class="relative">
+        <img src="../images/My_season_of_Plesaant_surprises.jpg" 
+             alt="Worship Night" 
+             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            13th May - 19th May 24
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">2ND Year Annivesary</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">My season of Plesaant surprises</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Welcome all to our 2nd Year Annivesary Special Program.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <span><i class="fas fa-clock mr-1"></i> Mon - Fri 7:30 PM</span>
+                            <span><i class="fas fa-star mr-1"></i> Special</span>
+                        </div>
+                        <button class="w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white py-2 rounded-lg transition-colors event-details-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Event 6 -->
+               <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
+    <div class="relative">
+        <img src="../images/Vigil_PowerNight.jpg" 
+             alt="Worship Night" 
+             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Jan 1
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-green-600 dark:text-green-400 font-semibold mb-2">FELLOWSHIP</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Vigil Power Night</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                            Join us Every 1st & Last Friday.
+                        </p>
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <span><i class="fas fa-clock mr-1"></i> 10:00 PM - 12AM</span>
+                            <span><i class="fas fa-sun mr-1"></i> Power</span>
+                        </div>
+                        <button class="w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white py-2 rounded-lg transition-colors event-details-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 id="modal-title" class="font-serif text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                    <button id="close-modal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="modal-content" class="text-gray-600 dark:text-gray-300">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+                <div class="mt-6 flex space-x-4">
+                    <button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg transition-colors">
+                        Register
+                    </button>
+                    <button class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-6 py-2 rounded-lg transition-colors">
+                        Add to Calendar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <section class="py-20 bg-primary-600 dark:bg-primary-800">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 fade-in">
+            <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center text-white mb-6">
+                Stay Updated on Events
+            </h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter to receive updates about upcoming events and activities
+            </p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg border-0 focus:ring-2 focus:ring-primary-300 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400">
+                <button class="bg-white text-primary-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <!-- Church Info -->
+<div>
+    <div class="flex items-center space-x-2 mb-6">
+        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+    </div>
+    <p class="text-gray-300 mb-4">
+        A place where faith comes alive and community thrives.
+    </p>
+    <div class="flex space-x-4">
+        <a href="#" class="social-link">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="events.html" class="footer-link">Events</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Times -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Service Times</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>Sunday Service: 11:00 AM</li>
+                        <li>Bible Study: Mon 7:30 PM</li>
+                        <li>Prayer Meeting: Wed 7:30 PM</li>
+                        <li>Power Night: Fri 10:00 PM</li>
+                    </ul>
+                </div>
+                
+                          <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary-400"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                            info@ccdmtexas.org
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 C. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    
+    <script>
+        // Event filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.event-filter-btn');
+            const eventCards = document.querySelectorAll('.event-card');
+            const detailButtons = document.querySelectorAll('.event-details-btn');
+            const modal = document.getElementById('event-modal');
+            const closeModal = document.getElementById('close-modal');
+            
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-primary-600', 'text-white');
+                        btn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                    });
+                    this.classList.add('active', 'bg-primary-600', 'text-white');
+                    this.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                    
+                    // Filter events
+                    eventCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal functionality
+            detailButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.closest('.event-card');
+                    const title = card.querySelector('h3').textContent;
+                    const description = card.querySelector('p').textContent;
+                    
+                    document.getElementById('modal-title').textContent = title;
+                    document.getElementById('modal-content').innerHTML = `
+                        <p class="mb-4">${description}</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <h4 class="font-semibold mb-2">Event Details:</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li><i class="fas fa-calendar-alt mr-2 text-primary-600"></i>Date: See event card</li>
+                                    <li><i class="fas fa-clock mr-2 text-primary-600"></i>Time: See event card</li>
+                                    <li><i class="fas fa-map-marker-alt mr-2 text-primary-600"></i>Location: Grace Community Church</li>
+                                    <li><i class="fas fa-dollar-sign mr-2 text-primary-600"></i>Cost: Free</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">What to Expect:</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li><i class="fas fa-users mr-2 text-primary-600"></i>Fellowship with community</li>
+                                    <li><i class="fas fa-heart mr-2 text-primary-600"></i>Spiritual enrichment</li>
+                                    <li><i class="fas fa-smile mr-2 text-primary-600"></i>Welcoming atmosphere</li>
+                                    <li><i class="fas fa-parking mr-2 text-primary-600"></i>Free parking available</li>
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                    modal.classList.remove('hidden');
+                });
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                modal.classList.add('hidden');
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

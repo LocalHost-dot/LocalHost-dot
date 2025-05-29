@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wakati Itusile USA, Texas Worship Center</title>
+    <meta name="description" content="Get in touch with Wakati Itusile USA, Texas Worship Center. Find our location, service times, and contact information.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': 'linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                            <img src="../images/CCDM LOGO PDF-1.jpg" alt="Church Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                    <a href="donate.html" class="nav-link bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">Donate</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden p-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition-all duration-300 hover:scale-105 shadow-sm">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="nav-link-mobile">Home</a>
+                    <a href="about.html" class="nav-link-mobile">About</a>
+                    <a href="services.html" class="nav-link-mobile">Services</a>
+                    <a href="events.html" class="nav-link-mobile">Events</a>
+                    <a href="contact.html" class="nav-link-mobile active">Contact</a>
+                    <a href="donate.html" class="nav-link-mobile bg-primary-600 text-white px-4 py-2 rounded-lg text-center">Donate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-primary-900 to-indigo-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-blue-600/20"></div>
+            <div class="absolute inset-0 bg-hero-pattern"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-16 h-16 bg-primary-500/10 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-16 w-12 h-12 bg-blue-500/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center relative z-10">
+            <div class="space-y-8 fade-in">
+                <!-- Badge -->
+                <div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white/90 font-medium shadow-lg">
+                    <i class="fas fa-envelope text-teal-400 mr-2"></i>
+                    Contact Us
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="font-display font-black text-6xl md:text-7xl lg:text-8xl leading-tight text-white">
+                    Get in
+                    <span class="block bg-gradient-to-r from-teal-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent">
+                        Touch
+                    </span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
+                    We'd love to hear from you. Reach out to us for <span class="inline-block font-semibold bg-gradient-to-r from-teal-300 to-cyan-300 bg-clip-text text-transparent">prayer requests</span>, 
+                    or to <span class="inline-block font-semibold bg-gradient-to-r from-cyan-300 to-teal-400 bg-clip-text text-transparent">learn more</span> about our church at Wakati Itusile USA, Texas Worship Center.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>
+
+    <!-- Contact Information -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Contact Info Cards -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-2xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Visit Us</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">333 Southwestern Blvd (Ste 339) </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Sugarland Tx 774478</p>
+                    <a href="#map" class="text-primary-600 dark:text-primary-400 hover:underline font-semibold">
+                        Get Directions
+                    </a>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-2xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Call Us</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">Main Office</p>
+                    <p class="text-xl font-semibold text-gray-900 dark:text-white mb-4">(555) 123-4567</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri: 9AM-5PM</p>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-2xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Email Us</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">General Inquiries</p>
+                    <a href="mailto:info@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline font-semibold">
+                        info@ccdmtexas.org
+                    </a>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">We'll respond within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Map -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="fade-in">
+                    <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-Left">
+                        Send Us a Message
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        Have a question or want to connect? Fill out the form below and we'll get back to you as soon as possible.
+                    </p>
+                    
+                    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                    First Name *
+                                </label>
+                                <input type="text" id="first-name" name="first-name" required
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                    Last Name *
+                                </label>
+                                <input type="text" id="last-name" name="last-name" required
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Phone Number
+                            </label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Subject *
+                            </label>
+                            <select id="subject" name="subject" required
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="prayer">Prayer Request</option>
+                                <option value="pastor">Speak with Pastor</option>
+                                <option value="volunteer">Volunteer Opportunities</option>
+                                <option value="events">Event Information</option>
+                                <option value="technical">Website/Technical Issue</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                Message *
+                            </label>
+                            <textarea id="message" name="message" rows="6" required
+                                      class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                      placeholder="Please share your message, question, or prayer request..."></textarea>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes"
+                                   class="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                            <label for="newsletter" class="ml-2 text-sm text-gray-600 dark:text-gray-300">
+                                I would like to receive newsletters and updates about church events and activities.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+                            <span class="submit-text">Send Message</span>
+                            <span class="loading-text hidden">
+                                <i class="fas fa-spinner fa-spin mr-2"></i>
+                                Sending...
+                            </span>
+                        </button>
+                    </form>
+                    
+                    <!-- Form Status Messages -->
+                    <div id="form-success" class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900/30 border border-green-400 text-green-700 dark:text-green-300 rounded-lg">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+                    
+                    <div id="form-error" class="hidden mt-4 p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 text-red-700 dark:text-red-300 rounded-lg">
+                        <i class="fas fa-exclamation-circle mr-2"></i>
+                        <span id="error-message">There was an error sending your message. Please try again.</span>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="fade-in">
+                    <h2 class="font-display font-bold text-3xl text-gray-900 mb-6 text-centertext-white mb-6">
+                        Find Us
+                    </h2>
+                    <div id="map" class="w-full h-96 bg-gray-300 dark:bg-gray-600 rounded-xl overflow-hidden shadow-lg mb-6">
+                        <!-- Google Maps Embed -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuMiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Directions and Parking Info -->
+                    <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            Directions & Parking
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-car text-primary-600 dark:text-primary-400 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Parking</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Free parking available in our main lot and street parking on Faith Street.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-bus text-primary-600 dark:text-primary-400 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Public Transit</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Bus routes 15 and 42 stop within two blocks. Metro station is 0.5 miles away.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-wheelchair text-primary-600 dark:text-primary-400 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Accessibility</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Wheelchair accessible entrance and facilities. Reserved parking spots available.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Times -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Service Times
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Join us for worship and fellowship throughout the week
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Sunday Service -->
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-cross text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Sunday Service</h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">11:00 AM - 1:30 PM</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Main worship service with communion</p>
+                </div>
+                
+                <!-- Bible Study -->
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-book-open text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Bible Study</h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">Monday 7:30 PM - 9:00 PM</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Weekly Bible study and discussion</p>
+                </div>
+                
+                <!-- Prayer Meeting -->
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-praying-hands text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Prayer Meeting</h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">Wednesday 7:30 PM - 8:30 PM</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Community prayer and intercession</p>
+                </div>
+                
+                <!-- Power Night -->
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bolt text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Power Night</h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">1st & 3rd Fridays 10:00 PM</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Late night worship and prayer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Contact -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Connect with Our Team
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Our pastoral team is here to serve you and answer any questions you may have
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Senior Pastor -->
+               <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-lg fade-in">
+        <div class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-2xl mx-auto mb-8 flex items-center justify-center overflow-hidden">
+            <img src="../images/Ven3.jpg" alt="Ven. Tunde Bamigboye" class="w-full h-full object-cover object-center rounded-2xl">
+        </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">Ven. Tunde Bamigboye</h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-semibold mb-3">President CCDM Global</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Available for pastoral care, counseling, and spiritual guidance.</p>
+                    <a href="mailto:pastor@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline">
+                        info@ccdmtexas.org
+                    </a>
+                </div>
+                
+                <!-- Associate Pastor -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-lg fade-in">
+        <div class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-2xl mx-auto mb-8 flex items-center justify-center overflow-hidden">
+            <img src="../images/Olu5.jpg" alt="Revd. Samuel Olukosi" class="w-full h-full object-cover object-center rounded-2xl">
+        </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">Revd. Samuel Olukosi</h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-semibold mb-3">Pastor In Charge</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Oversees ministries, outreach, and community programs.</p>
+                    <a href="mailto:sarah@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline">
+                        info@ccdmtexas.org
+                    </a>
+                </div>
+                
+                <!-- Office Manager -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-lg fade-in">
+        <div class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-2xl mx-auto mb-8 flex items-center justify-center overflow-hidden">
+            <img src="../images/Wife.jpg" alt="Dns Abigail Olukosi" class="w-full h-full object-cover object-center rounded-2xl">
+        </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">Dns Abigail Olukosi</h3>
+                    <p class="text-primary-600 dark:text-primary-400 font-semibold mb-3">Office Manager</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">General inquiries, event coordination, and administrative support.</p>
+                    <a href="mailto:office@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline">
+                        info@ccdmtexas.org
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <!-- Church Info -->
+<div>
+    <div class="flex items-center space-x-2 mb-6">
+        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+    </div>
+    <p class="text-gray-300 mb-4">
+        A place where faith comes alive and community thrives.
+    </p>
+    <div class="flex space-x-4">
+        <a href="#" class="social-link">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="events.html" class="footer-link">Events</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Times -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Service Times</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>Sunday Service: 11:00 AM</li>
+                        <li>Bible Study: Mon 7:30 PM</li>
+                        <li>Prayer Meeting: Wed 7:30 PM</li>
+                        <li>Power Night: Fri 10:00 PM</li>
+                    </ul>
+                </div>
+                
+                         <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary-400"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                            info@ccdmtexas.org
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 C. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCDM Texas Worship Center - Welcome Home</title>
+    <meta name="description" content="Welcome to Wakati Itusile Church - Where Mercy Speaks.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        },
+                        accent: {
+                            50: '#fef7ff',
+                            100: '#fdeaff',
+                            200: '#fbd5ff',
+                            300: '#f7b2ff',
+                            400: '#f280ff',
+                            500: '#ea4dff',
+                            600: '#d025e8',
+                            700: '#b018c4',
+                            800: '#91169f',
+                            900: '#771782'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'slide-in-left': 'slideInLeft 0.6s ease-out',
+                        'slide-in-right': 'slideInRight 0.6s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        glow: {
+                            'from': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
+                            'to': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.6)' }
+                        },
+                        fadeInUp: {
+                            'from': { opacity: '0', transform: 'translateY(30px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            'from': { opacity: '0', transform: 'translateY(-30px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideInLeft: {
+                            'from': { opacity: '0', transform: 'translateX(-30px)' },
+                            'to': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInRight: {
+                            'from': { opacity: '0', transform: 'translateX(30px)' },
+                            'to': { opacity: '1', transform: 'translateX(0)' }
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                        'hero-pattern': 'linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <div class="container px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                            <img src="/images/Logo.png" alt="Church Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="./index.html" class="nav-link active">Home</a>
+                    <a href="./pages/about.html" class="nav-link">About</a>
+                    <a href="./pages/services.html" class="nav-link">Services</a>
+                    <a href="./pages/events.html" class="nav-link">Events</a>
+                    <a href="./pages/contact.html" class="nav-link">Contact</a>
+                    <a href="./pages/donate.html" class="nav-link bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700">Donate</a>
+                </div>
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <span class="sr-only">Toggle mobile menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="./index.html" class="nav-link-mobile active">Home</a>
+                    <a href="./pages/about.html" class="nav-link-mobile">About</a>
+                    <a href="./pages/services.html" class="nav-link-mobile">Services</a>
+                    <a href="./pages/events.html" class="nav-link-mobile">Events</a>
+                    <a href="./pages/contact.html" class="nav-link-mobile">Contact</a>
+                    <a href="./pages/donate.html" class="nav-link-mobile bg-primary-600 text-white px-4 py-2 rounded-lg">Donate</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+</body>
+</html>
+
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
+        <!-- Animated Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-blue-600/20"></div>
+            <div class="absolute inset-0 bg-hero-pattern"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-primary-500/10 rounded-full animate-float"></div>
+        <div class="absolute top-40 right-16 w-16 h-16 bg-blue-500/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-32 left-20 w-12 h-12 bg-indigo-500/10 rounded-full animate-float" style="animation-delay: 4s;"></div>
+        
+        <!-- Main Content -->
+        <div class="relative z-10 text-center max-w-6xl mx-auto px-6 pt-20">
+            <div class="space-y-8 fade-in">
+              <!-- Welcome Badge -->
+<div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white/90 font-medium shadow-lg">
+    <i class="fas fa-fire text-orange-400 mr-2"></i>
+    Where Mercy Speaks
+</div>
+                
+                <!-- Main Heading -->
+                <h1 class="font-display font-black text-6xl md:text-8xl lg:text-9xl leading-tight text-white">
+                    <span class="block">Christ Covenant</span>
+                    
+
+<span class="block bg-gradient-to-r from-yellow-300 via-orange-300 to-orange-400 bg-clip-text text-transparent">
+    Deliverance
+</span>
+
+
+                    </span>
+                    <span class="block text-5xl md:text-6xl lg:text-7xl font-light text-white/90">Ministries</span>
+                </h1>
+                
+                <!-- Subtitle -->
+<!-- Subtitle -->
+<p class="text-xl md:text-2xl lg:text-3xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
+    Welcome home to <span class="font-semibold bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">Wakati Itusile USA</span>, 
+    <span class="font-semibold text-blue-300">Texas Worship Center</span>, 
+    Where <span class="font-semibold text-indigo-300">Mercy Speaks</span> by God's endless love.
+</p>
+
+<!-- Call to Action Section -->
+<div class="mt-8 flex justify-center w-full">
+    <div class="inline-flex items-center px-6 py-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white shadow-md">
+        <div class="flex items-center space-x-6">
+            <!-- Join Us Button -->
+            <a href="./pages/contact.html" class="text-center hover:bg-white/10 hover:border-orange-600 rounded px-4 py-2 transition-all duration-200">
+                <div class="text-lg font-semibold text-orange-400">Join us this Sunday</div>
+                <div class="text-sm text-gray-300 uppercase tracking-wide">Plan Your Visit</div>
+            </a>
+            <!-- Divider -->
+            <div class="w-px h-8 bg-gray-300/30"></div>
+            <!-- Watch Live Button -->
+            <a href="./pages/services.html" class="text-center hover:bg-white/10 hover:border-orange-600 rounded px-4 py-2 transition-all duration-200">
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-play text-orange-400 mr-2"></i>
+                    <span class="text-lg font-semibold text-orange-400">Watch Live</span>
+                </div>
+                <div class="text-sm text-gray-300 uppercase tracking-wide">Stream Now</div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Service Times Badge -->
+<div class="flex justify-center w-full mt-4">
+    <div class="inline-flex items-center px-8 py-4 bg-black/20 backdrop-blur-xl rounded-2xl border border-white/10 text-white shadow-2xl">
+        <div class="flex items-center space-x-6">
+            <div class="text-center">
+                <div class="text-sm text-white/70 uppercase tracking-wide">Sunday Service</div>
+                <div class="text-lg font-bold text-primary-300">11:00 AM</div>
+            </div>
+            <div class="w-px h-8 bg-white/30"></div>
+            <div class="text-center">
+                <div class="text-sm text-white/70 uppercase tracking-wide">Bible Study</div>
+                <div class="text-lg font-bold text-blue-300">Mon 7:30 PM</div>
+            </div>
+            <div class="w-px h-8 bg-white/30"></div>
+            <div class="text-center">
+                <div class="text-sm text-white/70 uppercase tracking-wide">Prayer Meeting</div>
+                <div class="text-lg font-bold text-indigo-300">Wed 7:30 PM</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
+                <div class="flex flex-col items-center space-y-2">
+                    <span class="text-sm font-medium">Scroll to explore</span>
+                    <i class="fas fa-chevron-down text-lg"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Activities Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20 fade-in">
+                <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-700 dark:text-primary-300 font-semibold text-sm mb-4">
+                    <i class="fas fa-calendar-week mr-2"></i>
+                    Weekly Schedule
+                </div>
+                <h2 class="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6">
+                    Join Us <span class="bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">This Week</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Experience God's presence throughout the week with worship, fellowship, and spiritual growth opportunities.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+                <!-- Sunday Service -->
+                <div class="modern-activity-card group">
+                    <div class="modern-activity-icon bg-gradient-to-br from-red-500 to-pink-600">
+                        <i class="fas fa-church text-2xl text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Sunday Service</h3>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-primary-600 dark:text-primary-400 mr-2"></i>
+                            <span class="text-lg font-semibold text-primary-700 dark:text-primary-300">11:00 AM – 1:30 PM</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Join us for inspiring worship, powerful preaching, and authentic community fellowship.</p>
+                        <div class="mt-6">
+                            <a href="pages/services.html" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+                                Watch Live <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bible Study -->
+                <div class="modern-activity-card group">
+                    <div class="modern-activity-icon bg-gradient-to-br from-emerald-500 to-teal-600">
+                        <i class="fas fa-book-open text-2xl text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Bible Study</h3>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                            <span class="text-lg font-semibold text-emerald-700 dark:text-emerald-300">Mon 7:30 PM – 9:00 PM</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Dive deeper into God's Word with guided study, discussion, and practical application.</p>
+                        <div class="mt-6">
+                            <a href="pages/events.html" class="inline-flex items-center text-emerald-600 dark:text-emerald-400 font-semibold hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
+                                Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Prayer Meeting -->
+                <div class="modern-activity-card group">
+                    <div class="modern-activity-icon bg-gradient-to-br from-purple-500 to-indigo-600">
+                        <i class="fas fa-praying-hands text-2xl text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Prayer Meeting</h3>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-purple-600 dark:text-purple-400 mr-2"></i>
+                            <span class="text-lg font-semibold text-purple-700 dark:text-purple-300">Wed 7:30 PM – 8:30 PM</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Unite in prayer for our community, families, and the world around us.</p>
+                        <div class="mt-6">
+                            <a href="pages/contact.html" class="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold hover:text-purple-700 dark:hover:text-purple-300 transition-colors">
+                                Join Us <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Power Night -->
+                <div class="modern-activity-card group">
+                    <div class="modern-activity-icon bg-gradient-to-br from-orange-500 to-red-600">
+                        <i class="fas fa-fire text-2xl text-white"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Power Night</h3>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-orange-600 dark:text-orange-400 mr-2"></i>
+                            <span class="text-lg font-semibold text-orange-700 dark:text-orange-300">1st & 3rd Fri 10:00 PM</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Experience God's power through worship, prayer, and spiritual breakthrough.</p>
+                        <div class="mt-6">
+                            <a href="pages/events.html" class="inline-flex items-center text-orange-600 dark:text-orange-400 font-semibold hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
+                                Experience <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 dark:opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-100 to-blue-100 dark:from-primary-900 dark:to-blue-900"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in space-y-8">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-700 dark:text-primary-300 font-semibold text-sm">
+                            <i class="fas fa-heart mr-2"></i>
+                            Our Purpose
+                        </div>
+                        <h2 class="font-display font-bold text-5xl md:text-6xl text-gray-900 dark:text-white leading-tight">
+                            Our Mission &<br>
+                            <span class="bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">Vision</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                           At CCDM USA Texas Worship Center, we are committed to building a vibrant community where everyone can encounter God's transformative power, grow in their faith journey, and serve others with genuine purpose.
+                        </p>
+                    </div>
+                    
+                    
+<div class="grid grid-cols-1 gap-6">
+    <!-- Biblical Foundation -->
+    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-bible text-white text-lg"></i>
+        </div>
+        <div>
+            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Biblical Foundation</h3>
+            <p class="text-gray-600 dark:text-gray-300">Authentic worship and life-changing biblical teaching rooted in God's Word.</p>
+        </div>
+    </div>
+    <!-- Strong Community -->
+    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-users text-white text-lg"></i>
+        </div>
+        <div>
+            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Strong Community</h3>
+            <p class="text-gray-600 dark:text-gray-300">Building lasting relationships and meaningful fellowship across all generations.</p>
+        </div>
+    </div>
+    <!-- Fervent Prayer -->
+    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-fire text-white text-lg"></i>
+        </div>
+        <div>
+            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Fervent Prayer</h3>
+            <p class="text-gray-600 dark:text-gray-300">Seeking God’s presence through passionate prayer for transformation and revival.</p>
+        </div>
+    </div>
+</div>
+
+                    
+                    <div class="pt-4">
+                        <a href="pages/about.html" class="modern-cta-button inline-flex items-center group">
+                            <span>Discover Our Story</span>
+                            <i class="fas fa-arrow-right ml-3 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-blue-600/20 rounded-3xl transform rotate-6"></div>
+                        <img src="./images/Img11.jpg" 
+                             alt="Church Community" 
+                             class="relative rounded-3xl shadow-2xl w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-blue-800 dark:from-primary-800 dark:via-primary-900 dark:to-blue-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-hero-pattern"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-20 w-32 h-32 bg-white/5 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-24 h-24 bg-white/5 rounded-full animate-float" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-5xl mx-auto text-center px-6 lg:px-8 relative z-10 fade-in">
+            <div class="space-y-8">
+                <div class="space-y-6">
+                    <h2 class="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+                        Ready to Join Our<br>
+                        <span class="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Faith Family</span>?
+                    </h2>
+                    <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                        Whether you're taking your first steps in faith or looking for a church home, 
+                        we welcome you with open hearts and genuine community.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+                    <a href="pages/contact.html" class="hero-cta-primary group">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-xl group-hover:animate-pulse"></i>
+                            <div>
+                                <span class="block text-lg font-bold">Plan Your First Visit</span>
+                                <span class="block text-sm opacity-90">We can't wait to meet you</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-right ml-4 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    
+                    <a href="pages/services.html" class="hero-cta-secondary group">
+                        <i class="fas fa-play mr-3 text-lg group-hover:scale-110 transition-transform"></i>
+                        <span class="font-semibold">Watch Services Online</span>
+                    </a>
+                </div>
+                
+                <!-- Contact Info Badge -->
+                <div class="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 text-white shadow-2xl mt-12">
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <div class="text-sm text-white/70 uppercase tracking-wide">Questions?</div>
+                            <div class="text-lg font-bold text-yellow-300">(555) 123-4567</div>
+                        </div>
+                        <div class="w-px h-8 bg-white/30"></div>
+                        <div class="text-center">
+                            <div class="text-sm text-white/70 uppercase tracking-wide">Location</div>
+                            <div class="text-lg font-bold text-orange-300">333 Southwestern Sugarland Tx</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <!-- Church Info -->
+<div>
+    <div class="flex items-center space-x-2 mb-6">
+        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+    </div>
+    <p class="text-gray-300 mb-4">
+        A place where faith comes alive and community thrives.
+    </p>
+    <div class="flex space-x-4">
+        <a href="#" class="social-link">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="pages/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="pages/services.html" class="footer-link">Services</a></li>
+                        <li><a href="pages/events.html" class="footer-link">Events</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Times -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Service Times</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>Sunday Service: 11:00 AM</li>
+                        <li>Bible Study: Mon 7:30 PM</li>
+                        <li>Prayer Meeting: Wed 7:30 PM</li>
+                        <li>Power Night: Fri 10:00 PM</li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary-400"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                            info@ccdmtexas.org
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 C. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/light-mode.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live & Recorded Services - Wakati Itusile USA, Texas Worship Center</title>
+    <meta name="description" content="Watch live services and browse our archive of recorded sermons and worship sessions at Wakati Itusile USA, Texas Worship Center.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': 'linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                            <img src="../images/CCDM LOGO PDF-1.jpg" alt="Church Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="donate.html" class="nav-link bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">Donate</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="nav-link-mobile">Home</a>
+                    <a href="about.html" class="nav-link-mobile">About</a>
+                    <a href="services.html" class="nav-link-mobile active">Services</a>
+                    <a href="events.html" class="nav-link-mobile">Events</a>
+                    <a href="contact.html" class="nav-link-mobile">Contact</a>
+                    <a href="donate.html" class="nav-link-mobile bg-primary-600 text-white px-4 py-2 rounded-lg text-center">Donate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-primary-900 to-indigo-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-blue-600/20"></div>
+            <div class="absolute inset-0 bg-hero-pattern"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-16 h-16 bg-primary-500/10 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-16 w-12 h-12 bg-blue-500/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center relative z-10">
+            <div class="space-y-8 fade-in">
+                <!-- Badge -->
+                <div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white/90 font-medium shadow-lg">
+                    <i class="fas fa-video text-red-400 mr-2"></i>
+                    Live & Recorded
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="font-display font-black text-6xl md:text-7xl lg:text-8xl leading-tight text-white">
+                    Watch Our
+                    <span class="block bg-gradient-to-r from-red-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">
+                        Services
+                    </span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
+                    Join us for <span class="font-semibold text-red-300">live worship</span> or catch up on 
+                    <span class="font-semibold text-pink-300">previous services</span> and inspiring sermons at Wakati Itusile USA, Texas Worship Center
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+</body>
+</html>
+
+    <!-- Live Stream Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Live Stream
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Experience our services live from anywhere in the world
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Live Status Indicator -->
+                <div class="flex items-center justify-center mb-8 fade-in">
+                    <div class="flex items-center bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 px-4 py-2 rounded-full">
+                        <div class="w-3 h-3 bg-red-500 rounded-full mr-2 animate-pulse"></div>
+                        <span class="font-semibold">LIVE NOW - Sunday Service</span>
+                    </div>
+                </div>
+                
+            
+
+<!-- Live Stream Player -->
+<div class="relative bg-gray-900 rounded-xl overflow-hidden shadow-2xl fade-in">
+    <div class="aspect-video">
+        <!-- YouTube Video Embed -->
+        <iframe 
+            src="https://www.youtube.com/embed/7m6NpOzc9F8?autoplay=0&mute=0" 
+            title="Wakati Itusile USA, Texas Worship Center Live Stream"
+            class="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <!-- Stream Controls -->
+    <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-black/50 rounded-lg p-4 backdrop-blur-sm">
+        <div class="text-white">
+            <h3 class="font-semibold text-lg">Sunday Morning Service</h3>
+            <p class="text-sm text-gray-300">Revd. Samuel Olukosi</p>
+        </div>
+        <div class="flex items-center space-x-2">
+            <button class="bg-white/20 hover:bg-white/30 text-white p-2 rounded-lg transition-colors">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+                
+                <!-- Service Information -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 fade-in">
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center">
+                        <i class="fas fa-clock text-2xl text-primary-600 dark:text-primary-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Service Times</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Sunday: 11:00 AM - 1:30 PM</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center">
+                        <i class="fas fa-users text-2xl text-primary-600 dark:text-primary-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Join Chat</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Connect with others during service</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center">
+                        <i class="fas fa-heart text-2xl text-primary-600 dark:text-primary-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Give Online</h3>
+                        <a href="donate.html" class="text-primary-600 dark:text-primary-400 hover:underline">Make a donation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Services Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Audio Services
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Listen to our services on the go with our audio-only streams
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg fade-in">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Live Audio Stream</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Listen to our current service</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm text-gray-500 dark:text-gray-400">Quality</div>
+                            <select class="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-1 text-sm">
+                                <option>High (320kbps)</option>
+                                <option>Medium (160kbps)</option>
+                                <option>Low (64kbps)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Audio Player -->
+                    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6">
+                        <audio controls class="w-full">
+                            <source src="https://stream.gracechurch.com/live" type="audio/mpeg">
+                            <p class="text-gray-600 dark:text-gray-300">Your browser does not support the audio element.</p>
+                        </audio>
+                        
+                        <div class="mt-4 flex items-center justify-between text-sm text-gray-600 dark:text-gray-300">
+                            <span>Sunday Morning Service - Live</span>
+                            <span>Pastor James Mitchell</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermon Archive Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Sermon Archive
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Browse our collection of previous sermons and messages
+                </p>
+            </div>
+            
+            <!-- Filter Options -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in">
+                <button class="filter-btn active bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors" data-filter="all">
+                    All Sermons
+                </button>
+                <button class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="recent">
+                    Recent
+                </button>
+                <button class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="series">
+                    Series
+                </button>
+                <button class="filter-btn bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-filter="audio">
+                    Audio Only
+                </button>
+            </div>
+            
+            <!-- Sermon Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sermon 1 -->
+                <div class="sermon-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                    <div class="relative">
+                        <img src="https://pixabay.com/get/g5a195ffaf275b95d463bbbbfbd3e352a52ec8f2fc7fd2d3750d40489a4d4516b36da0f63ab02c222e25f7a7923dab8f58ca7c1742c68cb6cc16d0b592d284522_1280.jpg" 
+                             alt="Sermon Thumbnail" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <button class="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                            45:30
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">December 10, 2024</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Walking in Faith</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Revd. Samuel Olukosi explores what it means to trust God completely in every season of life.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">Hebrews 11:1-6</span>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sermon 2 -->
+                <div class="sermon-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                    <div class="relative">
+                        <img src="https://pixabay.com/get/g924a148195d8f0e462a88a7e743ce16b42fe848ca40724ea75edd11cda22b4c334a518b23d641d83b29c4990d8e2897bff19c928d02391d7f263a8c4bb89cb61_1280.jpg" 
+                             alt="Sermon Thumbnail" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <button class="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                            52:15
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">December 3, 2024</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Love in Action</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Dns Abigail Olukosi n teaches about demonstrating Christ's love through our daily actions and choices.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">1 John 3:16-18</span>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sermon 3 -->
+                <div class="sermon-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                    <div class="relative">
+                        <img src="https://pixabay.com/get/gaabacfd37b8db6161a3967e2960b8818193f0fce3358d98505a8a7db36d88ac2cfc889788e5b46ed97287f938afb09a061265babb473cfffaa45ffe2770cb340_1280.jpg" 
+                             alt="Sermon Thumbnail" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                            <button class="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-sm">
+                            <i class="fas fa-volume-up mr-1"></i>
+                            38:45
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">November 26, 2024</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Grateful Hearts</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">A special Thanksgiving message about cultivating gratitude in all circumstances.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">1 Thess. 5:16-18</span>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-12 fade-in">
+                <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    Load More Sermons
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                    Subscribe to Our Podcast
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Never miss a sermon - subscribe to our podcast on your favorite platform
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 fade-in">
+                <a href="#" class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 flex items-center space-x-4 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fab fa-apple text-3xl text-gray-600 dark:text-gray-300"></i>
+                    <div>
+                        <div class="font-semibold text-gray-900 dark:text-white">Apple Podcasts</div>
+                        <div class="text-sm text-gray-500 dark:text-gray-400">Available on iOS</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 flex items-center space-x-4 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fab fa-spotify text-3xl text-green-500"></i>
+                    <div>
+                        <div class="font-semibold text-gray-900 dark:text-white">Spotify</div>
+                        <div class="text-sm text-gray-500 dark:text-gray-400">Stream anywhere</div>
+                    </div>
+                </a>
+                
+                <a href="#" class="bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 flex items-center space-x-4 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fab fa-google text-3xl text-blue-500"></i>
+                    <div>
+                        <div class="font-semibold text-gray-900 dark:text-white">Google Podcasts</div>
+                        <div class="text-sm text-gray-500 dark:text-gray-400">Android compatible</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <!-- Church Info -->
+<div>
+    <div class="flex items-center space-x-2 mb-6">
+        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+    </div>
+    <p class="text-gray-300 mb-4">
+        A place where faith comes alive and community thrives.
+    </p>
+    <div class="flex space-x-4">
+        <a href="#" class="social-link">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="events.html" class="footer-link">Events</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Service Times -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Service Times</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>Sunday Service: 11:00 AM</li>
+                        <li>Bible Study: Mon 7:30 PM</li>
+                        <li>Prayer Meeting: Wed 7:30 PM</li>
+                        <li>Power Night: Fri 10:00 PM</li>
+                    </ul>
+                </div>
+                
+                           <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary-400"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                            info@ccdmtexas.org
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 C. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/animations.js"></script>
+</body>
+</html>
