@@ -1,23 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCDM Texas Worship Center - Welcome Home</title>
-    <meta name="description" content="Welcome to Wakati Itusile Church - Where Mercy Speaks.">
+    <meta name="description" content="Welcome to Wakati Itusile USA, Texas Worship Center - Where Mercy Speaks.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;550;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
     
     <!-- Tailwind Config -->
     <script>
@@ -58,529 +54,2516 @@
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'fade-in-up': 'fadeInUp 0.6s ease-out',
-                        'fade-in-down': 'fadeInDown 0.6s ease-out',
-                        'slide-in-left': 'slideInLeft 0.6s ease-out',
-                        'slide-in-right': 'slideInRight 0.6s ease-out'
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'float-delayed': 'float 7s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1.2s ease-out',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in-down': 'fadeInDown 0.8s ease-out',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out',
+                        'slide-in-right': 'slideInRight 0.8s ease-out',
+                        'scale-in': 'scaleIn 1s ease-out',
+                        'rotate-slow': 'rotateSlow 20s linear infinite',
+                        'shimmer': 'shimmer 2.5s ease-in-out infinite',
+                        'text-glow': 'textGlow 3s ease-in-out infinite alternate'
                     },
                     keyframes: {
                         float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-20px) rotate(5deg)' }
                         },
                         glow: {
-                            'from': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
-                            'to': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.6)' }
+                            '0%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3), 0 0 40px rgba(14, 165, 233, 0.1)' },
+                            '100%': { boxShadow: '0 0 40px rgba(14, 165, 233, 0.6), 0 0 80px rgba(14, 165, 233, 0.2)' }
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 30px rgba(251, 146, 60, 0.4), inset 0 0 30px rgba(251, 146, 60, 0.1)' },
+                            '50%': { boxShadow: '0 0 60px rgba(251, 146, 60, 0.8), inset 0 0 40px rgba(251, 146, 60, 0.2)' }
+                        },
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
                         },
                         fadeInUp: {
-                            'from': { opacity: '0', transform: 'translateY(30px)' },
+                            'from': { opacity: '0', transform: 'translateY(40px)' },
                             'to': { opacity: '1', transform: 'translateY(0)' }
                         },
                         fadeInDown: {
-                            'from': { opacity: '0', transform: 'translateY(-30px)' },
+                            'from': { opacity: '0', transform: 'translateY(-40px)' },
                             'to': { opacity: '1', transform: 'translateY(0)' }
                         },
                         slideInLeft: {
-                            'from': { opacity: '0', transform: 'translateX(-30px)' },
+                            'from': { opacity: '0', transform: 'translateX(-50px)' },
                             'to': { opacity: '1', transform: 'translateX(0)' }
                         },
                         slideInRight: {
-                            'from': { opacity: '0', transform: 'translateX(30px)' },
+                            'from': { opacity: '0', transform: 'translateX(50px)' },
                             'to': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        scaleIn: {
+                            'from': { opacity: '0', transform: 'scale(0.8)' },
+                            'to': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        rotateSlow: {
+                            'from': { transform: 'rotate(0deg)' },
+                            'to': { transform: 'rotate(360deg)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        },
+                        textGlow: {
+                            '0%': { textShadow: '0 0 10px rgba(251, 191, 36, 0.5), 0 0 20px rgba(251, 146, 60, 0.3)' },
+                            '100%': { textShadow: '0 0 20px rgba(251, 191, 36, 0.8), 0 0 40px rgba(251, 146, 60, 0.5), 0 0 60px rgba(251, 146, 60, 0.2)' }
                         }
                     },
                     backgroundImage: {
                         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                        'hero-pattern': 'linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)',
+                        'mesh-gradient': 'radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%)',
+                        'shimmer': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .text-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s ease-in-out infinite;
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-morphism-dark {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+            background-size: 300% 300%;
+            animation: shimmer 3s ease-in-out infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .floating-particles::before,
+        .floating-particles::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(251, 191, 36, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-particles::before {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-particles::after {
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-morphism transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 animate-glow">
+                            <img src="images/CCDM LOGO PDF-1.png" alt="Church Logo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-bold text-xl text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-300 -mt-1">Deliverance Ministry</span>
+                        </div>
+                    </a>
+                </div>
+              
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="./index.html" class="text-white hover:text-primary-300 transition-colors duration-200 font-medium">Home</a>
+                    <a href="./pages/about.html" class="text-white/80 hover:text-white transition-colors duration-200">About</a>
+                    <a href="./pages/services.html" class="text-white/80 hover:text-white transition-colors duration-200">Services</a>
+                    <a href="./pages/events.html" class="text-white/80 hover:text-white transition-colors duration-200">Events</a>
+                    <a href="./pages/contact.html" class="text-white/80 hover:text-white transition-colors duration-200">Contact</a>
+                    <a href="./pages/donate.html" class="glass-morphism text-white px-6 py-2 rounded-full hover:bg-white/20 transition-all duration-200 font-medium">Donate</a>
+                </div>
+                
+              <!-- Mobile Menu Button -->
+<div class="flex items-center space-x-4 md:hidden">
+    <button id="hamburger-btn" class="glass-morphism p-2 rounded-lg text-white">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden fixed top-16 left-0 right-0 bg-gray-900/95 glass-morphism-dark hidden flex-col items-center space-y-4 py-6">
+    <a href="./index.html" class="text-white hover:text-primary-300 transition-colors duration-200 font-medium">Home</a>
+    <a href="./pages/about.html" class="text-white/80 hover:text-white transition-colors duration-200">About</a>
+    <a href="./pages/services.html" class="text-white/80 hover:text-white transition-colors duration-200">Services</a>
+    <a href="./pages/events.html" class="text-white/80 hover:text-white transition-colors duration-200">Events</a>
+    <a href="./pages/contact.html" class="text-white/80 hover:text-white transition-colors duration-200">Contact</a>
+    <a href="./pages/donate.html" class="glass-morphism text-white px-6 py-2 rounded-full hover:bg-white/20 transition-all duration-200 font-medium">Donate</a>
+</div>
+<style>
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    z-index: 40;
+}
+#mobile-menu:not(.hidden) {
+    display: flex;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon between bars and X
+            const icon = hamburgerBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+});
+</script>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden floating-particles">
+        <!-- Video Background -->
+        <video class="absolute inset-0 w-full h-full object-cover scale-105 animate-fade-in"
+               autoplay
+               loop
+               muted
+               playsinline
+               poster="images/hero-fallback.jpg">
+            <source src="videos/herovid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>      <!-- Hero Section with Video -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden floating-particles">
+  
+  <!-- Video Background -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover scale-105 animate-fade-in"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="images/hero-fallback.jpg">
+    
+    <source src="videos/herovid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Your Content (Text, Buttons, etc.) goes here -->
+</section>
+
+        
+        <!-- Advanced Overlay System -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-900/30 via-transparent to-blue-900/30"></div>
+        <div class="absolute inset-0 bg-mesh-gradient opacity-20"></div>
+        
+        <!-- Animated Geometric Elements -->
+        <div class="absolute inset-0 opacity-30">
+            <!-- Large floating circles -->
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary-500/10 to-blue-500/5 rounded-full animate-float-slow"></div>
+            <div class="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-orange-400/10 to-yellow-400/5 rounded-full animate-float-delayed"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 rounded-full animate-float"></div>
+            
+            <!-- Rotating ring -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full animate-rotate-slow"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-primary-400/5 rounded-full animate-rotate-slow" style="animation-direction: reverse; animation-duration: 30s;"></div>
+        </div>
+        
+        <!-- Main Content Container -->
+        <div class="relative z-10 text-center max-w-7xl mx-auto px-6 pt-20">
+            <div class="space-y-12">
+                
+                <!-- Welcome Badge with Enhanced Design -->
+                <div class="inline-flex items-center animate-fade-in-down" style="animation-delay: 0.2s;">
+                    <div class="glass-morphism-dark px-8 py-4 rounded-full shadow-2xl animate-pulse-glow">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
+                            <span class="text-white/90 font-medium text-lg tracking-wide">Nibiti Aánú Tí ń Sọ̀rọ̀</span>
+                            <div class="w-3 h-3 bg-orange-400 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Heading with Advanced Typography -->
+                <div class="space-y-4">
+                    <h1 class="font-serif font-black leading-tight text-white tracking-wide">
+                        <div class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl animate-fade-in-up" style="animation-delay: 0.4s;">
+                            <span class="block mb-2">Christ Covenant</span>
+                        </div>
+                        <div class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl animate-fade-in-up" style="animation-delay: 0.6s;">
+                            <span class="block text-gradient-gold animate-text-glow mb-2">
+                                Deliverance
+                            </span>
+                        </div>
+                        <div class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white/90 animate-fade-in-up" style="animation-delay: 0.8s;">
+                            <span class="block">Ministries</span>
+                            <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary-300 font-medium">(CCDM)</span>
+                        </div>
+                    </h1>
+                </div>
+                
+                <!-- Enhanced Subtitle -->
+                <div class="animate-fade-in-up" style="animation-delay: 1s;">
+                    <p class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white/90 max-w-5xl mx-auto leading-relaxed font-light">
+                        Welcome home to 
+                        <span class="font-semibold text-gradient-gold">CCDM Texas</span>, 
+                        <br class="hidden sm:block">
+                        <span class="font-semibold text-blue-300 animate-text-glow">AKA Wakati Itusile</span>, 
+                        Where <span class="font-semibold text-indigo-300 animate-text-glow">Mercy Speaks</span> 
+                        <br class="hidden sm:block">
+                        by God's endless love.
+                    </p>
+                </div>
+                
+                <!-- Enhanced Call to Action Section -->
+                <div class="animate-scale-in" style="animation-delay: 1.2s;">
+                    <div class="glass-morphism-dark rounded-3xl p-8 shadow-2xl max-w-4xl mx-auto animate-glow">
+                        <div class="flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12">
+                            
+                            <!-- Join Us Button -->
+                            <a href="./pages/contact.html" class="group relative overflow-hidden">
+                                <div class="glass-morphism rounded-2xl p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-gradient-gold mb-2 group-hover:animate-pulse">
+                                            Join us this Sunday
+                                        </div>
+                                        <div class="text-sm text-gray-300 uppercase tracking-wider font-medium">
+                                            Plan Your Visit
+                                        </div>
+                                        <div class="mt-3 w-12 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Watch Live Button -->
+                            <a href="https://www.youtube.com/@wakatiitusileusa3581/streams" target="_blank" class="group relative overflow-hidden">
+                                <div class="glass-morphism rounded-2xl p-6 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                                    <div class="text-center">
+                                        <div class="flex items-center justify-center space-x-3 mb-2">
+                                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center animate-pulse">
+                                                <i class="fas fa-play text-white text-lg"></i>
+                                            </div>
+                                            <span class="text-2xl font-bold text-gradient-gold group-hover:animate-pulse">Watch Live</span>
+                                        </div>
+                                        <div class="text-sm text-gray-300 uppercase tracking-wider font-medium">
+                                            Stream Now
+                                        </div>
+                                        <div class="mt-3 w-12 h-1 bg-gradient-to-r from-red-400 to-orange-400 rounded-full mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Service Times -->
+                <div class="animate-fade-in-up" style="animation-delay: 1.4s;">
+                    <div class="glass-morphism-dark rounded-3xl p-8 shadow-2xl max-w-6xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            
+                            <div class="text-center group">
+                                <div class="mb-4">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-church text-white text-2xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-white/70 uppercase tracking-wider font-medium mb-2">Sunday Service</div>
+                                <div class="text-2xl font-bold text-primary-300 group-hover:text-primary-200 transition-colors duration-300">11:00 AM CST</div>
+                            </div>
+                            
+                            <div class="text-center group">
+                                <div class="mb-4">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-book-open text-white text-2xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-white/70 uppercase tracking-wider font-medium mb-2">Bible Study</div>
+                                <div class="text-2xl font-bold text-blue-300 group-hover:text-blue-200 transition-colors duration-300">Mon 7:30 PM CST</div>
+                            </div>
+                            
+                            <div class="text-center group">
+                                <div class="mb-4">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-2xl mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-praying-hands text-white text-2xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-white/70 uppercase tracking-wider font-medium mb-2">Prayer Meeting</div>
+                                <div class="text-2xl font-bold text-indigo-300 group-hover:text-indigo-200 transition-colors duration-300">Wed 7:30 PM CST</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Scroll Indicator -->
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce">
+                    <div class="flex flex-col items-center space-y-3">
+                        <div class="glass-morphism rounded-full p-3">
+                            <span class="text-sm font-medium">Scroll to explore</span>
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <i class="fas fa-chevron-down text-sm animate-bounce"></i>
+                            <i class="fas fa-chevron-down text-xs animate-bounce" style="animation-delay: 0.2s;"></i>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Additional Floating Elements -->
+        <div class="absolute top-16 right-12 w-6 h-6 bg-yellow-400/20 rounded-full animate-float"></div>
+        <div class="absolute top-32 left-16 w-4 h-4 bg-blue-400/20 rounded-full animate-float-delayed"></div>
+        <div class="absolute bottom-24 right-20 w-8 h-8 bg-orange-400/20 rounded-full animate-float-slow"></div>
+        <div class="absolute bottom-16 left-12 w-5 h-5 bg-indigo-400/20 rounded-full animate-float"></div>
+        
+    </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Weekly Activities Section -->
+<section class="weekly-activities py-24 bg-gray-900 relative overflow-hidden" role="region" aria-label="Weekly Activities">
+    <!-- Background with Overlay -->
+    <div class="absolute inset-0 bg-cover bg-center background-image">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/60 to-blue-800/40 dark:from-blue-950/80 dark:to-blue-900/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header Section -->
+        <header class="text-center mb-20 fade-in">
+            <div class="max-w-4xl mx-auto glass-container p-8 md:p-12 rounded-3xl">
+                <!-- Floating Particles -->
+                <div class="particles-overlay">
+                    <div class="particle" style="left: 15%; top: 20%; animation-delay: 0s;"></div>
+                    <div class="particle" style="left: 85%; top: 30%; animation-delay: 2s;"></div>
+                    <div class="particle" style="left: 25%; top: 70%; animation-delay: 4s;"></div>
+                    <div class="particle" style="left: 75%; top: 80%; animation-delay: 6s;"></div>
+                </div>
+
+                <!-- Premium Badge -->
+                <div class="mb-8">
+                    <div class="premium-badge inline-flex items-center px-6 py-3 rounded-full">
+                        <div class="relative mr-3">
+                            <i class="fas fa-calendar-week text-lg text-blue-700 dark:text-blue-300"></i>
+                            <div class="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full animate-pulse"></div>
+                        </div>
+                        <span class="font-semibold text-sm tracking-wider uppercase text-blue-700 dark:text-blue-300">Weekly Schedule</span>
+                    </div>
+                </div>
+
+                <!-- Main Heading -->
+                <h2 class="font-display font-black text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight enhanced-text-shadow">
+                    <span class="block">Join Us</span>
+                    <span class="block shimmer-text mt-2">This Week</span>
+                </h2>
+
+                <!-- Divider -->
+                <div class="flex items-center justify-center my-8">
+                    <div class="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent w-20"></div>
+                    <div class="mx-4 w-2 h-2 bg-blue-500/70 rounded-full animate-pulse"></div>
+                    <div class="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent w-20"></div>
+                </div>
+
+                <!-- Description -->
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light enhanced-text-shadow">
+                    Experience God's presence throughout the week with 
+                    <span class="font-semibold text-blue-400">worship</span>, 
+                    <span class="font-semibold text-blue-400">fellowship</span>, and 
+                    <span class="font-semibold text-blue-400">spiritual growth</span> opportunities.
+                </p>
+            </div>
+        </header>
+
+        <!-- Activities Grid -->
+        <div class="activities-grid grid gap-8">
+            <!-- Sunday Service -->
+<div class="activity-card sunday-service group fade-in" aria-label="Sunday Service details">
+    <div class="activity-icon bg-gradient-to-br from-red-500 to-pink-600">
+        <i class="fas fa-church text-2xl text-white"></i>
+    </div>
+    <div class="p-8">
+        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Sunday Service</h3>
+        <div class="flex items-center mb-4">
+            <i class="fas fa-clock text-red-600 dark:text-red-400 mr-2"></i>
+            <span class="text-lg font-semibold text-red-700 dark:text-red-300">11:00 AM – 1:30 PM CST</span>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Join us for inspiring worship, powerful preaching, and authentic community fellowship.</p>
+        <a href="https://www.youtube.com/@wakatiitusileusa3581/streams" target="_blank" class="inline-flex items-center text-red-600 dark:text-red-400 font-semibold hover:text-red-700 dark:hover:text-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500" aria-label="Watch Sunday Service live">
+            Watch Live <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+        </a>
+    </div>
+</div>
+
+            <!-- Bible Study -->
+            <div class="activity-card bible-study group fade-in" aria-label="Bible Study details">
+                <div class="activity-icon bg-gradient-to-br from-emerald-500 to-teal-600">
+                    <i class="fas fa-book-open text-2xl text-white"></i>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Bible Study</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-clock text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                        <span class="text-lg font-semibold text-emerald-700 dark:text-emerald-300">Mon 7:30 PM – 9:00 PM CST</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Dive deeper into God's Word with guided study, discussion, and practical application.</p>
+                    <a href="https://www.youtube.com/@wakatiitusileusa3581/streams" target="_blank" class="inline-flex items-center text-red-600 dark:text-red-400 font-semibold hover:text-red-700 dark:hover:text-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500" aria-label="Learn more about Bible Study">
+                        Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Prayer Meeting -->
+            <div class="activity-card prayer-meeting group fade-in" aria-label="Prayer Meeting details">
+                <div class="activity-icon bg-gradient-to-br from-purple-500 to-indigo-600">
+                    <i class="fas fa-praying-hands text-2xl text-white"></i>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Prayer Meeting</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-clock text-purple-600 dark:text-purple-400 mr-2"></i>
+                        <span class="text-lg font-semibold text-purple-700 dark:text-purple-300">Wed 7:30 PM – 8:30 PM CST</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Unite in prayer for our community, families, and the world around us.</p>
+                    <a href="https://www.youtube.com/@wakatiitusileusa3581/streams" target="_blank" class="inline-flex items-center text-red-600 dark:text-red-400 font-semibold hover:text-red-700 dark:hover:text-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500" aria-label="Join Prayer Meeting">
+                        Join Us <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Power Night -->
+            <div class="activity-card power-night group fade-in" aria-label="Power Night details">
+                <div class="activity-icon bg-gradient-to-br from-orange-500 to-red-600">
+                    <i class="fas fa-fire text-2xl text-white"></i>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Power Night</h3>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-clock text-orange-600 dark:text-orange-400 mr-2"></i>
+                        <span class="text-lg font-semibold text-orange-700 dark:text-orange-300">1st & 3rd Fri 10:00 PM CST</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">Join our community for a powerful night of fellowship, prayer, and worship.</p>
+                    <a href="https://www.youtube.com/@wakatiitusileusa3581/streams" target="_blank" class="inline-flex items-center text-red-600 dark:text-red-400 font-semibold hover:text-red-700 dark:hover:text-red-300 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500" aria-label="Experience Power Night">
+                        Experience <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Scoped to .weekly-activities to avoid conflicts */
+        .weekly-activities {
+            /* CSS Variables */
+            --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --shadow-glow-sunday: 0 20px 40px rgba(239, 68, 68, 0.2);
+            --shadow-glow-bible: 0 20px 40px rgba(16, 185, 129, 0.2);
+            --shadow-glow-prayer: 0 20px 40px rgba(139, 92, 246, 0.2);
+            --shadow-glow-power: 0 20px 40px rgba(249, 115, 22, 0.2);
+            --blue-primary: rgb(29 78 216);
+            --blue-primary-dark: rgb(147 197 253);
+        }
+
+        /* Background Image */
+        .weekly-activities .background-image {
+            background-image: url('images/Img1.jpg');
+        }
+
+        /* Glassmorphism Header */
+        .weekly-activities .glass-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            animation: float-gentle 6s ease-in-out infinite;
+            position: relative;
+        }
+        .dark .weekly-activities .glass-container {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-8px) scale(1.01); }
+        }
+
+        /* Premium Badge */
+        .weekly-activities .premium-badge {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--blue-primary);
+            position: relative;
+            overflow: hidden;
+        }
+        .dark .weekly-activities .premium-badge {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.4) 0%, rgba(30, 64, 175, 0.2) 100%);
+            color: var(--blue-primary-dark);
+            border: 1px solid rgba(147, 197, 253, 0.3);
+        }
+        .weekly-activities .premium-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.8s ease;
+        }
+        .weekly-activities .premium-badge:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+        .weekly-activities .premium-badge:hover::before {
+            left: 100%;
+        }
+
+        /* Shimmering Text */
+        .weekly-activities .shimmer-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 25%, #ec4899 50%, #f97316 75%, #3b82f6 100%);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer-flow 4s ease-in-out infinite;
+        }
+        .dark .weekly-activities .shimmer-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 25%, #f472b6 50%, #fb923c 75%, #60a5fa 100%);
+        }
+        @keyframes shimmer-flow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Enhanced Text Shadow */
+        .weekly-activities .enhanced-text-shadow {
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        /* Floating Particles */
+        .weekly-activities .particles-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .weekly-activities .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(59, 130, 246, 0.6);
+            border-radius: 50%;
+            animation: particle-float 8s infinite ease-in-out;
+        }
+        .dark .weekly-activities .particle {
+            background: rgba(96, 165, 250, 0.6);
+        }
+        @keyframes particle-float {
+            0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.6; }
+            25% { transform: translateY(-15px) translateX(8px) scale(1.2); opacity: 0.8; }
+            50% { transform: translateY(-25px) translateX(-5px) scale(0.8); opacity: 1; }
+            75% { transform: translateY(-12px) translateX(-8px) scale(1.1); opacity: 0.7; }
+        }
+
+        /* Activities Grid */
+        .weekly-activities .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .weekly-activities .activities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .weekly-activities .activities-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Activity Cards */
+        .weekly-activities .activity-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-card);
+            position: relative;
+        }
+        .dark .weekly-activities .activity-card {
+            background: #1f2937;
+        }
+        .weekly-activities .activity-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-card-hover);
+        }
+        .weekly-activities .activity-icon {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .weekly-activities .activity-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        .weekly-activities .activity-card:hover .activity-icon::before {
+            left: 100%;
+        }
+        /* Card-Specific Glows */
+        .weekly-activities .sunday-service:hover { box-shadow: var(--shadow-glow-sunday); }
+        .weekly-activities .bible-study:hover { box-shadow: var(--shadow-glow-bible); }
+        .weekly-activities .prayer-meeting:hover { box-shadow: var(--shadow-glow-prayer); }
+        .weekly-activities .power-night:hover { box-shadow: var(--shadow-glow-power); }
+
+        /* Fade-in Animation */
+        .weekly-activities .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Media Queries */
+        @media (min-width: 1024px) {
+            .weekly-activities .background-image {
+                background-attachment: fixed;
+            }
+        }
+        @media (max-width: 768px) {
+            .weekly-activities .glass-container {
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                padding: 2rem;
+            }
+            .weekly-activities .premium-badge {
+                padding: 0.75rem 1.5rem;
+            }
+            .weekly-activities .particle {
+                width: 3px;
+                height: 3px;
+            }
+            .weekly-activities .activity-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+
+    <!-- JavaScript for Parallax Effect -->
+    <script>
+        // Parallax effect for Weekly Activities background
+        (function() {
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const now = performance.now();
+                if (now - lastScroll < 16) return; // Throttle to ~60fps
+                lastScroll = now;
+                const bg = document.querySelector('.weekly-activities .background-image');
+                if (bg) {
+                    const offset = window.pageYOffset;
+                    bg.style.backgroundPositionY = `${offset * 0.3}px`;
+                }
+            });
+        })();
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5 dark:opacity-10">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-100 to-blue-100 dark:from-primary-900 dark:to-blue-900"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="fade-in">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-700 dark:text-primary-300 font-semibold text-sm animate-slide-in-left">
+                        <i class="fas fa-heart mr-2 transform transition-transform duration-300 group-hover:scale-110"></i>
+                        Our Purpose
+                    </div>
+                    <h2 class="font-display font-bold text-5xl md:text-6xl text-gray-900 dark:text-white leading-tight animate-slide-in-up">
+                        Our Mission &<br>
+                        <span class="text-blue-600 dark:text-blue-400">Vision</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed animate-fade-in delay-200">
+                        Our Purpose
+To bring total deliverance to those bound by the enemy through the power of the Holy Spirit, fervent prayers, and the unchanging Word of God. We exist to raise a generation of free, spiritually empowered believers who walk in truth and victory.
+
+Our Mission
+To lead souls to freedom in Christ through intense intercession, deliverance, sound biblical teaching, and a do-it-yourself approach to spiritual warfare. We are committed to restoring lives, rebuilding families, and advancing God's Kingdom on earth.
+
+Our Vision
+To be a global deliverance ministry that ignites revival, sets captives free, and raises spiritually alert believers who carry fire, truth, and power in every sphere of life.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-6 mt-8">
+                    <!-- Biblical Foundation -->
+                    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl group hover-card biblical-foundation animate-slide-in-left delay-300">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 transform transition-transform duration-300 group-hover:scale-110">
+                            <i class="fas fa-bible text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-emerald-500">Biblical Foundation</h3>
+                            <p class="text-gray-600 dark:text-gray-300 transition-opacity duration-300 group-hover:opacity-80">Authentic worship and life-changing biblical teaching rooted in God's Word.</p>
+                        </div>
+                    </div>
+                    <!-- Strong Community -->
+                    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl group hover-card strong-community animate-slide-in-left delay-400">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 transform transition-transform duration-300 group-hover:scale-110">
+                            <i class="fas fa-users text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-purple-500">Strong Community</h3>
+                            <p class="text-gray-600 dark:text-gray-300 transition-opacity duration-300 group-hover:opacity-80">Building lasting relationships and meaningful fellowship across all generations.</p>
+                        </div>
+                    </div>
+                    <!-- Fervent Prayer -->
+                    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl group hover-card fervent-prayer animate-slide-in-left delay-500">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0 transform transition-transform duration-300 group-hover:scale-110">
+                            <i class="fas fa-fire text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-orange-500">Fervent Prayer</h3>
+                            <p class="text-gray-600 dark:text-gray-300 transition-opacity duration-300 group-hover:opacity-80">Seeking God's presence through passionate prayer for transformation and revival.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pt-4">
+                    <a href="./pages/about.html" class="modern-cta-button inline-flex items-center group animate-fade-in delay-600 relative overflow-hidden px-4 py-2 rounded-lg transition-all duration-300 hover:bg-blue-600/10 hover:shadow-lg">
+                        <span class="relative inline-block transition-all duration-300 group-hover:text-blue-400">
+                            Discover Our Story
+                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                        </span>
+                        <i class="fas fa-arrow-right ml-3 transform group-hover:translate-x-2 transition-transform duration-300 group-hover:scale-110"></i>
+                        <span class="absolute inset-0 bg-gradient-to-r from-blue-600/0 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="fade-in">
+                <!-- Advanced 3D Carousel Container (Unchanged) -->
+                <div class="relative w-full h-[500px] perspective-1000">
+                    <!-- Main Carousel Stage -->
+                    <div id="carousel-3d" class="relative w-full h-full preserve-3d">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide absolute inset-0 backface-hidden" data-index="0">
+                            <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl transform-gpu">
+                                <img src="images/img15.jpeg" alt="Church Community 1" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/30 to-purple-600/30 opacity-80"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent">
+                                    <h3 class="text-white text-2xl font-bold mb-2">Our Community</h3>
+                                    <p class="text-white/90 text-lg">Experience the warmth of fellowship</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide absolute inset-0 backface-hidden" data-index="1">
+                            <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl transform-gpu">
+                                <img src="images/Img12.jpeg" alt="Church Community 2" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-teal-600/30 opacity-80"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent">
+                                    <h3 class="text-white text-2xl font-bold mb-2">Worship Together</h3>
+                                    <p class="text-white/90 text-lg">Join us in powerful worship experiences</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide absolute inset-0 backface-hidden" data-index="2">
+                            <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl transform-gpu">
+                                <img src="images/Img13.jpeg" alt="Church Community 3" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-500/30 to-red-600/30 opacity-80"></div>
+                                <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent">
+                                    <h3 class="text-white text-2xl font-bold mb-2">Growing Faith</h3>
+                                    <p class="text-white/90 text-lg">Discover your purpose in God's plan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3D Navigation Controls -->
+                    <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 z-20 group">
+                        <i class="fas fa-chevron-left transform group-hover:-translate-x-1 transition-transform"></i>
+                    </button>
+                    <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 z-20 group">
+                        <i class="fas fa-chevron-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                    
+                    <!-- Progress Ring -->
+                    <div class="absolute top-6 right-6 w-16 h-16 z-20">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                            <circle id="progress-ring" cx="18" cy="18" r="16" fill="none" stroke="white" stroke-width="2" 
+                                    stroke-dasharray="100" stroke-dashoffset="100" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span id="slide-counter" class="text-white font-bold text-sm">1</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Animated Dots -->
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
+                        <button class="carousel-dot-3d w-4 h-4 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/60 transition-all duration-300" data-index="0">
+                            <div class="w-full h-full rounded-full bg-white/60 scale-0 transition-transform duration-300"></div>
+                        </button>
+                        <button class="carousel-dot-3d w-4 h-4 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/60 transition-all duration-300" data-index="1">
+                            <div class="w-full h-full rounded-full bg-white/60 scale-0 transition-transform duration-300"></div>
+                        </button>
+                        <button class="carousel-dot-3d w-4 h-4 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/60 transition-all duration-300" data-index="2">
+                            <div class="w-full h-full rounded-full bg-white/60 scale-0 transition-transform duration-300"></div>
+                        </button>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute top-1/4 -left-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-600 rounded-full opacity-30 animate-float"></div>
+                    <div class="absolute bottom-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-blue-400 to-teal-600 rounded-full opacity-30 animate-float-delay"></div>
+                    <div class="absolute top-1/2 -left-4 w-8 h-8 bg-gradient-to-br from-orange-400 to-red-600 rounded-full opacity-40 animate-float-slow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom CSS for Micro Animations and Carousel -->
+    <style>
+        /* Existing Carousel Styles (Unchanged) */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+        
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        
+        .carousel-slide {
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateX(100%) rotateY(45deg) scale(0.8);
+            opacity: 0;
+            z-index: 1;
+        }
+        
+        .carousel-slide.active {
+            transform: translateX(0) rotateY(0deg) scale(1);
+            opacity: 1;
+            z-index: 10;
+        }
+        
+        .carousel-slide.prev {
+            transform: translateX(-100%) rotateY(-45deg) scale(0.8);
+            opacity: 0.3;
+            z-index: 5;
+        }
+        
+        .carousel-slide.next {
+            transform: translateX(100%) rotateY(45deg) scale(0.8);
+            opacity: 0.3;
+            z-index: 5;
+        }
+        
+        .carousel-slide img {
+            transition: transform 12s ease-in-out;
+            transform: scale(1.1);
+        }
+        
+        .carousel-slide.active img {
+            animation: advancedKenBurns 12s ease-in-out infinite;
+        }
+        
+        @keyframes advancedKenBurns {
+            0% { 
+                transform: scale(1.1) translate(0, 0) rotate(0deg);
+                filter: brightness(1) saturate(1);
+            }
+            25% { 
+                transform: scale(1.15) translate(3%, -2%) rotate(0.5deg);
+                filter: brightness(1.05) saturate(1.1);
+            }
+            50% { 
+                transform: scale(1.2) translate(-2%, 3%) rotate(-0.3deg);
+                filter: brightness(1.1) saturate(1.2);
+            }
+            75% { 
+                transform: scale(1.15) translate(2%, -1%) rotate(0.2deg);
+                filter: brightness(1.05) saturate(1.1);
+            }
+            100% { 
+                transform: scale(1.1) translate(0, 0) rotate(0deg);
+                filter: brightness(1) saturate(1);
+            }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-delay {
+            animation: float-delay 8s ease-in-out infinite 2s;
+        }
+        
+        .animate-float-slow {
+            animation: float-slow 10s ease-in-out infinite 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        @keyframes float-delay {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(-180deg); }
+        }
+        
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(90deg); }
+        }
+        
+        @keyframes progress {
+            from { stroke-dashoffset: 100; }
+            to { stroke-dashoffset: 0; }
+        }
+        
+        .carousel-dot-3d.active div {
+            transform: scale(1);
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        }
+        
+        .carousel-dot-3d {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel-dot-3d::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(0deg);
+            transition: transform 0.6s ease;
+        }
+        
+        .carousel-dot-3d.active::before {
+            transform: rotate(360deg);
+        }
+        
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateX(-10px) scale(1.05);
+            z-index: 10;
+        }
+        
+        .hover-card.biblical-foundation:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 12px rgba(16, 185, 129, 0.3);
+        }
+        .hover-card.strong-community:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 12px rgba(139, 92, 246, 0.3);
+        }
+        .hover-card.fervent-prayer:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 0 12px rgba(249, 115, 22, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-slide {
+                transform: translateY(100%) scale(0.9);
+            }
+            
+            .carousel-slide.active {
+                transform: translateY(0) scale(1);
+            }
+            
+            .carousel-slide.prev {
+                transform: translateY(-100%) scale(0.9);
+            }
+            
+            .carousel-slide.next {
+                transform: translateY(100%) scale(0.9);
+            }
+        }
+
+        /* Existing Micro Animation Styles */
+        .animate-slide-in-left {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+
+        .animate-slide-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Enhanced Button Hover Effect */
+        .modern-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+
+    <!-- Existing Carousel JavaScript (Unchanged) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('carousel-3d');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot-3d');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const progressRing = document.getElementById('progress-ring');
+            const slideCounter = document.getElementById('slide-counter');
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            let autoSlideInterval;
+            let progressInterval;
+            const slideDelay = 6000; // 6 seconds
+            
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active', 'prev', 'next');
+                    
+                    if (index === currentIndex) {
+                        slide.classList.add('active');
+                    } else if (index === (currentIndex - 1 + totalSlides) % totalSlides) {
+                        slide.classList.add('prev');
+                    } else if (index === (currentIndex + 1) % totalSlides) {
+                        slide.classList.add('next');
+                    }
+                });
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+                
+                // Update counter
+                slideCounter.textContent = currentIndex + 1;
+                
+                // Reset and start progress animation
+                startProgressAnimation();
+            }
+            
+            function startProgressAnimation() {
+                progressRing.style.animation = 'none';
+                progressRing.offsetHeight; // Trigger reflow
+                progressRing.style.animation = `progress ${slideDelay}ms linear`;
+            }
+            
+            function goToSlide(index) {
+                currentIndex = (index + totalSlides) % totalSlides;
+                updateSlides();
+            }
+            
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+            
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+            
+            function startAutoSlide() {
+                stopAutoSlide();
+                autoSlideInterval = setInterval(nextSlide, slideDelay);
+            }
+            
+            function stopAutoSlide() {
+                if (autoSlideInterval) {
+                    clearInterval(autoSlideInterval);
+                }
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoSlide();
+                    goToSlide(index);
+                    startAutoSlide();
+                });
+            });
+            
+            // Pause on hover
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+            
+            // Touch support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAutoSlide();
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startAutoSlide();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                }
+            }
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    stopAutoSlide();
+                    prevSlide();
+                    startAutoSlide();
+                } else if (e.key === 'ArrowRight') {
+                    stopAutoSlide();
+                    nextSlide();
+                    startAutoSlide();
+                }
+            });
+            
+            // Initialize
+            updateSlides();
+            startAutoSlide();
+        });
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Wakati Itusile USA, Texas Worship Center</title>
+    <meta name="description" content="Explore our church gallery at Wakati Itusile USA, Texas Worship Center. View moments of worship, fellowship, and community service.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    },
+                    backgroundImage: {
                         'hero-pattern': 'linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)'
                     }
                 }
             }
         }
     </script>
+    
+    <!-- Gallery and Navigation Styles -->
+    <style>
+        .gallery-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .gallery-overlay {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(147, 51, 234, 0.9));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .modal-backdrop {
+            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-content {
+            animation: modalSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        .stagger-7 { animation-delay: 0.7s; }
+        .stagger-8 { animation-delay: 0.8s; }
+        .stagger-9 { animation-delay: 0.9s; }
+        .stagger-10 { animation-delay: 1.0s; }
+        .stagger-11 { animation-delay: 1.1s; }
+        .stagger-12 { animation-delay: 1.2s; }
+        
+        .text-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s ease-in-out infinite;
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-morphism-dark {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+            background-size: 300% 300%;
+            animation: shimmer 3s ease-in-out infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .floating-particles::before,
+        .floating-particles::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(251, 191, 36, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-particles::before {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-particles::after {
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+    </style>
 </head>
 <body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
-        <div class="container px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center space-x-3 group">
-                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                            <img src="images/CCDM LOGO PDF-1.jpg" alt="Church Logo" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
-                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
-                        </div>
-                    </a>
-                </div>
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="./index.html" class="nav-link active">Home</a>
-                    <a href="./pages/about.html" class="nav-link">About</a>
-                    <a href="./pages/services.html" class="nav-link">Services</a>
-                    <a href="./pages/events.html" class="nav-link">Events</a>
-                    <a href="./pages/contact.html" class="nav-link">Contact</a>
-                    <a href="./pages/donate.html" class="nav-link bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700">Donate</a>
-                </div>
-                <!-- Dark Mode Toggle & Mobile Menu -->
-                <div class="flex items-center space-x-4">
-                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
-                    </button>
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
-                        <span class="sr-only">Toggle mobile menu</span>
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="./index.html" class="nav-link-mobile active">Home</a>
-                    <a href="./pages/about.html" class="nav-link-mobile">About</a>
-                    <a href="./pages/services.html" class="nav-link-mobile">Services</a>
-                    <a href="./pages/events.html" class="nav-link-mobile">Events</a>
-                    <a href="./pages/contact.html" class="nav-link-mobile">Contact</a>
-                    <a href="./pages/donate.html" class="nav-link-mobile bg-primary-600 text-white px-4 py-2 rounded-lg">Donate</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- JavaScript -->
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
-</body>
-</html>
 
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 dark:from-gray-900 dark:via-slate-900 dark:to-gray-800">
-        <!-- Animated Background Pattern -->
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-blue-600/20"></div>
-            <div class="absolute inset-0 bg-hero-pattern"></div>
-        </div>
-        
-        <!-- Floating Elements -->
-        <div class="absolute top-20 left-10 w-20 h-20 bg-primary-500/10 rounded-full animate-float"></div>
-        <div class="absolute top-40 right-16 w-16 h-16 bg-blue-500/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
-        <div class="absolute bottom-32 left-20 w-12 h-12 bg-indigo-500/10 rounded-full animate-float" style="animation-delay: 4s;"></div>
-        
-        <!-- Main Content -->
-        <div class="relative z-10 text-center max-w-6xl mx-auto px-6 pt-20">
-            <div class="space-y-8 fade-in">
-              <!-- Welcome Badge -->
-<div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 text-white/90 font-medium shadow-lg">
-    <i class="fas fa-fire text-orange-400 mr-2"></i>
-    Where Mercy Speaks
-</div>
-                
-                <!-- Main Heading -->
-                <h1 class="font-display font-black text-6xl md:text-8xl lg:text-9xl leading-tight text-white">
-                    <span class="block">Christ Covenant</span>
-                    
-
-<span class="block bg-gradient-to-r from-yellow-300 via-orange-300 to-orange-400 bg-clip-text text-transparent">
-    Deliverance
-</span>
-
-
-                    </span>
-                    <span class="block text-5xl md:text-6xl lg:text-7xl font-light text-white/90">Ministries</span>
-                </h1>
-                
-                <!-- Subtitle -->
-<!-- Subtitle -->
-<p class="text-xl md:text-2xl lg:text-3xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
-    Welcome home to <span class="font-semibold bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">Wakati Itusile USA</span>, 
-    <span class="font-semibold text-blue-300">Texas Worship Center</span>, 
-    Where <span class="font-semibold text-indigo-300">Mercy Speaks</span> by God's endless love.
-</p>
-
-<!-- Call to Action Section -->
-<div class="mt-8 flex justify-center w-full">
-    <div class="inline-flex items-center px-6 py-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white shadow-md">
-        <div class="flex items-center space-x-6">
-            <!-- Join Us Button -->
-            <a href="./pages/contact.html" class="text-center hover:bg-white/10 hover:border-orange-600 rounded px-4 py-2 transition-all duration-200">
-                <div class="text-lg font-semibold text-orange-400">Join us this Sunday</div>
-                <div class="text-sm text-gray-300 uppercase tracking-wide">Plan Your Visit</div>
-            </a>
-            <!-- Divider -->
-            <div class="w-px h-8 bg-gray-300/30"></div>
-            <!-- Watch Live Button -->
-            <a href="./pages/services.html" class="text-center hover:bg-white/10 hover:border-orange-600 rounded px-4 py-2 transition-all duration-200">
-                <div class="flex items-center justify-center">
-                    <i class="fas fa-play text-orange-400 mr-2"></i>
-                    <span class="text-lg font-semibold text-orange-400">Watch Live</span>
-                </div>
-                <div class="text-sm text-gray-300 uppercase tracking-wide">Stream Now</div>
-            </a>
-        </div>
-    </div>
-</div>
-<!-- Service Times Badge -->
-<div class="flex justify-center w-full mt-4">
-    <div class="inline-flex items-center px-8 py-4 bg-black/20 backdrop-blur-xl rounded-2xl border border-white/10 text-white shadow-2xl">
-        <div class="flex items-center space-x-6">
-            <div class="text-center">
-                <div class="text-sm text-white/70 uppercase tracking-wide">Sunday Service</div>
-                <div class="text-lg font-bold text-primary-300">11:00 AM</div>
-            </div>
-            <div class="w-px h-8 bg-white/30"></div>
-            <div class="text-center">
-                <div class="text-sm text-white/70 uppercase tracking-wide">Bible Study</div>
-                <div class="text-lg font-bold text-blue-300">Mon 7:30 PM</div>
-            </div>
-            <div class="w-px h-8 bg-white/30"></div>
-            <div class="text-center">
-                <div class="text-sm text-white/70 uppercase tracking-wide">Prayer Meeting</div>
-                <div class="text-lg font-bold text-indigo-300">Wed 7:30 PM</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
-                <div class="flex flex-col items-center space-y-2">
-                    <span class="text-sm font-medium">Scroll to explore</span>
-                    <i class="fas fa-chevron-down text-lg"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Weekly Activities Section -->
-    <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-20 fade-in">
-                <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-700 dark:text-primary-300 font-semibold text-sm mb-4">
-                    <i class="fas fa-calendar-week mr-2"></i>
-                    Weekly Schedule
-                </div>
-                <h2 class="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6">
-                    Join Us <span class="bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">This Week</span>
+ <!-- Gallery Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                    Our Church <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Gallery</span>
                 </h2>
-                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    Experience God's presence throughout the week with worship, fellowship, and spiritual growth opportunities.
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Witness the beauty of our community through moments of worship, fellowship, and service. 
+                    Each image tells a story of faith, love, and togetherness.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-                <!-- Sunday Service -->
-                <div class="modern-activity-card group">
-                    <div class="modern-activity-icon bg-gradient-to-br from-red-500 to-pink-600">
-                        <i class="fas fa-church text-2xl text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Sunday Service</h3>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-clock text-primary-600 dark:text-primary-400 mr-2"></i>
-                            <span class="text-lg font-semibold text-primary-700 dark:text-primary-300">11:00 AM – 1:30 PM</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Join us for inspiring worship, powerful preaching, and authentic community fellowship.</p>
-                        <div class="mt-6">
-                            <a href="pages/services.html" class="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
-                                Watch Live <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Bible Study -->
-                <div class="modern-activity-card group">
-                    <div class="modern-activity-icon bg-gradient-to-br from-emerald-500 to-teal-600">
-                        <i class="fas fa-book-open text-2xl text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Bible Study</h3>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-clock text-emerald-600 dark:text-emerald-400 mr-2"></i>
-                            <span class="text-lg font-semibold text-emerald-700 dark:text-emerald-300">Mon 7:30 PM – 9:00 PM</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Dive deeper into God's Word with guided study, discussion, and practical application.</p>
-                        <div class="mt-6">
-                            <a href="pages/events.html" class="inline-flex items-center text-emerald-600 dark:text-emerald-400 font-semibold hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
-                                Learn More <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Prayer Meeting -->
-                <div class="modern-activity-card group">
-                    <div class="modern-activity-icon bg-gradient-to-br from-purple-500 to-indigo-600">
-                        <i class="fas fa-praying-hands text-2xl text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Prayer Meeting</h3>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-clock text-purple-600 dark:text-purple-400 mr-2"></i>
-                            <span class="text-lg font-semibold text-purple-700 dark:text-purple-300">Wed 7:30 PM – 8:30 PM</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Unite in prayer for our community, families, and the world around us.</p>
-                        <div class="mt-6">
-                            <a href="pages/contact.html" class="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold hover:text-purple-700 dark:hover:text-purple-300 transition-colors">
-                                Join Us <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Power Night -->
-                <div class="modern-activity-card group">
-                    <div class="modern-activity-icon bg-gradient-to-br from-orange-500 to-red-600">
-                        <i class="fas fa-fire text-2xl text-white"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">Power Night</h3>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-clock text-orange-600 dark:text-orange-400 mr-2"></i>
-                            <span class="text-lg font-semibold text-orange-700 dark:text-orange-300">1st & 3rd Fri 10:00 PM</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Experience God's power through worship, prayer, and spiritual breakthrough.</p>
-                        <div class="mt-6">
-                            <a href="pages/events.html" class="inline-flex items-center text-orange-600 dark:text-orange-400 font-semibold hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
-                                Experience <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Preview Section -->
-    <section class="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5 dark:opacity-10">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-100 to-blue-100 dark:from-primary-900 dark:to-blue-900"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="fade-in space-y-8">
-                    <div class="space-y-6">
-                        <div class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-700 dark:text-primary-300 font-semibold text-sm">
-                            <i class="fas fa-heart mr-2"></i>
-                            Our Purpose
-                        </div>
-                        <h2 class="font-display font-bold text-5xl md:text-6xl text-gray-900 dark:text-white leading-tight">
-                            Our Mission &<br>
-                            <span class="bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">Vision</span>
-                        </h2>
-                        <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                           At CCDM USA Texas Worship Center, we are committed to building a vibrant community where everyone can encounter God's transformative power, grow in their faith journey, and serve others with genuine purpose.
-                        </p>
-                    </div>
-                    
-                    
-<div class="grid grid-cols-1 gap-6">
-    <!-- Biblical Foundation -->
-    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0">
-            <i class="fas fa-bible text-white text-lg"></i>
-        </div>
-        <div>
-            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Biblical Foundation</h3>
-            <p class="text-gray-600 dark:text-gray-300">Authentic worship and life-changing biblical teaching rooted in God's Word.</p>
-        </div>
-    </div>
-    <!-- Strong Community -->
-    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
-            <i class="fas fa-users text-white text-lg"></i>
-        </div>
-        <div>
-            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Strong Community</h3>
-            <p class="text-gray-600 dark:text-gray-300">Building lasting relationships and meaningful fellowship across all generations.</p>
-        </div>
-    </div>
-    <!-- Fervent Prayer -->
-    <div class="flex items-start space-x-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
-            <i class="fas fa-fire text-white text-lg"></i>
-        </div>
-        <div>
-            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">Fervent Prayer</h3>
-            <p class="text-gray-600 dark:text-gray-300">Seeking God’s presence through passionate prayer for transformation and revival.</p>
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pt-4">
-                        <a href="pages/about.html" class="modern-cta-button inline-flex items-center group">
-                            <span>Discover Our Story</span>
-                            <i class="fas fa-arrow-right ml-3 transform group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-1" onclick="openModal(0)">
                     <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-blue-600/20 rounded-3xl transform rotate-6"></div>
-                        <img src="./images/Img11.jpg" 
-                             alt="Church Community" 
-                             class="relative rounded-3xl shadow-2xl w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-blue-800 dark:from-primary-800 dark:via-primary-900 dark:to-blue-900 relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-hero-pattern"></div>
-        </div>
-        
-        <!-- Floating Elements -->
-        <div class="absolute top-20 left-20 w-32 h-32 bg-white/5 rounded-full animate-float"></div>
-        <div class="absolute bottom-20 right-20 w-24 h-24 bg-white/5 rounded-full animate-float" style="animation-delay: 2s;"></div>
-        
-        <div class="max-w-5xl mx-auto text-center px-6 lg:px-8 relative z-10 fade-in">
-            <div class="space-y-8">
-                <div class="space-y-6">
-                    <h2 class="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
-                        Ready to Join Our<br>
-                        <span class="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Faith Family</span>?
-                    </h2>
-                    <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                        Whether you're taking your first steps in faith or looking for a church home, 
-                        we welcome you with open hearts and genuine community.
-                    </p>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-                    <a href="pages/contact.html" class="hero-cta-primary group">
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-3 text-xl group-hover:animate-pulse"></i>
-                            <div>
-                                <span class="block text-lg font-bold">Plan Your First Visit</span>
-                                <span class="block text-sm opacity-90">We can't wait to meet you</span>
+                        <img src="../images/gallery/img8.jpg" 
+                             alt="Sunday Worship Service" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
                             </div>
                         </div>
-                        <i class="fas fa-arrow-right ml-4 transform group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                    
-                    <a href="pages/services.html" class="hero-cta-secondary group">
-                        <i class="fas fa-play mr-3 text-lg group-hover:scale-110 transition-transform"></i>
-                        <span class="font-semibold">Watch Services Online</span>
-                    </a>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Sunday Worship</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Our community gathering in praise and worship</p>
+                    </div>
                 </div>
                 
-                <!-- Contact Info Badge -->
-                <div class="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 text-white shadow-2xl mt-12">
-                    <div class="flex items-center space-x-6">
-                        <div class="text-center">
-                            <div class="text-sm text-white/70 uppercase tracking-wide">Questions?</div>
-                            <div class="text-lg font-bold text-yellow-300">(555) 123-4567</div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-2" onclick="openModal(1)">
+                    <div class="relative">
+                        <img src="../images/gallery/im13.jpeg" 
+                             alt="Church Interior" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
                         </div>
-                        <div class="w-px h-8 bg-white/30"></div>
-                        <div class="text-center">
-                            <div class="text-sm text-white/70 uppercase tracking-wide">Location</div>
-                            <div class="text-lg font-bold text-orange-300">333 Southwestern Sugarland Tx</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Sacred Space</h3>
+                        <p class="text-gray-600 dark:text-gray-300">The heart of our worship and prayer</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-3" onclick="openModal(2)">
+                    <div class="relative">
+                        <img src="../images/gallery/img14.jpeg" 
+                             alt="Community Fellowship" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Fellowship</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Building bonds through shared meals and community</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-4" onclick="openModal(3)">
+                    <div class="relative">
+                        <img src="../images/gallery/im19.jpeg" 
+                             alt="Youth Ministry" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Youth Ministry</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Nurturing the next generation in faith</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-5" onclick="openModal(4)">
+                    <div class="relative">
+                        <img src="../images/gallery/im17.jpeg" 
+                             alt="Prayer Group" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Prayer Circle</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Coming together in prayer and meditation</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-6" onclick="openModal(5)">
+                    <div class="relative">
+                        <img src="../images/gallery/im112.jpeg" 
+                             alt="Bible Study" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Bible Study</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Deepening our understanding through scripture</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-7" onclick="openModal(6)">
+                    <div class="relative">
+                        <img src="../images/gallery/bd.png" 
+                             alt="Church Exterior" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Our Home</h3>
+                        <p class="text-gray-600 dark:text-gray-300">The beautiful exterior of our church building</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-8" onclick="openModal(7)">
+                    <div class="relative">
+                        <img src="../images/gallery/im141.png" 
+                             alt="Choir Performance" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Choir Ministry</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Lifting voices in praise and worship</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-9" onclick="openModal(8)">
+                    <div class="relative">
+                        <img src="../images/gallery/im115.jpeg" 
+                             alt="Community Service" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Community Service</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Serving our community with love and compassion</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-10" onclick="openModal(9)">
+                    <div class="relative">
+                        <img src="../images/gallery/im16.jpeg" 
+                             alt="Wedding Ceremony" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Sacred Unions</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Celebrating love and commitment in faith</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-11" onclick="openModal(10)">
+                    <div class="relative">
+                        <img src="../images/gallery/img15.jpeg" 
+                             alt="Children's Ministry" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Children's Ministry</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Teaching young hearts about God's love</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden cursor-pointer fade-in stagger-12" onclick="openModal(11)">
+                    <div class="relative">
+                        <img src="../images/gallery/img12.jpeg" 
+                             alt="Baptism Ceremony" 
+                             class="w-full h-64 object-cover">
+                        <div class="gallery-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                </svg>
+                                <p class="text-sm font-medium">View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">New Beginnings</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Celebrating new life in Christ</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 hidden">
+        <div class="modal-backdrop absolute inset-0" onclick="closeModal()"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content relative max-w-4xl mx-auto">
+                <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <img id="modalImage" src="" alt="" class="w-full h-auto rounded-2xl shadow-2xl">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-b-2xl">
+                    <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 dark:text-white mb-2"></h3>
+                    <p id="modalDescription" class="text-gray-600 dark:text-gray-300"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-     <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-               <!-- Church Info -->
-<div>
-    <div class="flex items-center space-x-2 mb-6">
-       <img src="images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
-        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
-    </div>
-    <p class="text-gray-300 mb-4">
-        A place where faith comes alive and community thrives.
-    </p>
-    <div class="flex space-x-4">
-        <a href="#" class="social-link">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </div>
-</div>
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="pages/about.html" class="footer-link">About Us</a></li>
-                        <li><a href="pages/services.html" class="footer-link">Services</a></li>
-                        <li><a href="pages/events.html" class="footer-link">Events</a></li>
-                    </ul>
-                </div>
+
+    
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophisticated Church CTA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .cta-section {
+            min-height: 100vh;
+            position: relative;
+            background: linear-gradient(135deg, 
+                #2196F3 0%, 
+                #1976D2 25%, 
+                #3F51B5 50%, 
+                #0D47A1 75%, 
+                #42A5F5 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Animated particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        .particle:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 120px; height: 120px; left: 20%; animation-delay: 2s; }
+        .particle:nth-child(3) { width: 60px; height: 60px; left: 30%; animation-delay: 4s; }
+        .particle:nth-child(4) { width: 100px; height: 100px; left: 40%; animation-delay: 6s; }
+        .particle:nth-child(5) { width: 140px; height: 140px; left: 50%; animation-delay: 8s; }
+        .particle:nth-child(6) { width: 90px; height: 90px; left: 60%; animation-delay: 10s; }
+        .particle:nth-child(7) { width: 70px; height: 70px; left: 70%; animation-delay: 12s; }
+        .particle:nth-child(8) { width: 110px; height: 110px; left: 80%; animation-delay: 14s; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Glass morphism overlay */
+        .glass-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+
+        /* Content container */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* Main heading with advanced typography */
+        .main-heading {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .heading-line {
+            display: block;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #64B5F6, #2196F3, #1976D2, #42A5F5);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGradient 8s ease infinite;
+            position: relative;
+        }
+
+        @keyframes textGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Subtitle with elegant spacing */
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+            line-height: 1.6;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced button container */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        @media (min-width: 768px) {
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+                gap: 2rem;
+            }
+        }
+
+        /* Primary CTA with advanced hover effects */
+        .cta-primary {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 1.5rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            min-width: 300px;
+            justify-content: space-between;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .cta-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cta-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-primary:hover .cta-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .cta-text {
+            text-align: left;
+        }
+
+        .cta-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .cta-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .cta-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-primary:hover .cta-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Secondary CTA */
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.2rem 2rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-secondary .cta-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .cta-secondary:hover .cta-icon {
+            transform: scale(1.15);
+        }
+
+        /* Contact Button Styles */
+        .cta-contact {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            border-radius: 18px;
+            padding: 1.3rem 2.2rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            min-width: 280px;
+        }
+
+        .cta-contact:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 0.3rem;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .contact-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #E3F2FD;
+        }
+
+        .contact-icon {
+            font-size: 1.3rem;
+            color: #64B5F6;
+            transition: all 0.3s ease;
+        }
+
+        .cta-contact:hover .contact-icon {
+            transform: scale(1.2);
+            color: #BBDEFB;
+        }
+
+        /* Additional button for third CTA */
+        .cta-buttons-extended {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            animation: fadeInUp 1s ease 1s both;
+        }
+
+        @media (min-width: 768px) {
+            .cta-buttons-extended {
+                flex-direction: row;
+                justify-content: center;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            animation: bounce 2s infinite;
+            z-index: 10;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Enhanced responsive design */
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 1.5rem;
+            }
+            
+            .cta-primary, .cta-contact {
+                min-width: 280px;
+                padding: 1.2rem 2rem;
+            }
+            
+            .cta-buttons-extended {
+                width: 100%;
+            }
+        }
+
+        /* Additional sophisticated touches */
+        .section-decorator {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: rotate 30s linear infinite;
+        }
+
+        .section-decorator::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <section class="cta-section">
+        <!-- Animated particles -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- Glass morphism overlay -->
+        <div class="glass-overlay"></div>
+
+        <!-- Decorative elements -->
+        <div class="section-decorator"></div>
+
+        <!-- Main content -->
+        <div class="content-container">
+            <h2 class="main-heading">
+                <span class="heading-line">Ready to Join Our</span>
+                <span class="heading-line gradient-text">Faith Family</span>?
+            </h2>
+            
+            <p class="subtitle">
+                Whether you're taking your first steps in faith or looking for a church home, 
+                we welcome you with open hearts and genuine community.
+            </p>
+            
+            <div class="cta-buttons-extended">
+                <a href="pages/contact.html" class="cta-primary">
+                    <div class="cta-content">
+                        <i class="fas fa-map-marker-alt cta-icon"></i>
+                        <div class="cta-text">
+                            <div class="cta-title">Plan Your First Visit</div>
+                            <div class="cta-subtitle">We can't wait to meet you</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right cta-arrow"></i>
+                </a>
                 
-                <!-- Service Times -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-6">Service Times</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>Sunday Service: 11:00 AM</li>
-                        <li>Bible Study: Mon 7:30 PM</li>
-                        <li>Prayer Meeting: Wed 7:30 PM</li>
-                        <li>Power Night: Fri 10:00 PM</li>
-                    </ul>
-                </div>
+               <a href="https://www.youtube.com/@wakatiitusileusa3581/streams" target="_blank" class="cta-secondary">
+    <i class="fas fa-play cta-icon"></i>
+    <span>Watch Services Online</span>
+</a>
+                <a href="tel:+15551234567" class="cta-contact">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <div class="contact-info">
+                        <div class="contact-label">Questions?</div>
+                        <div class="contact-value">+1 (832) 433-4236</div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <a href="#" class="cta-contact">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <div class="contact-info">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">339 Southwestern Sugarland TX</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+</body>
+</html>
                 
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
-                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-primary-400"></i>
-                            (555) 123-4567
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
-                            info@ccdmtexas.org
-                        </li>
-                    </ul>
+
+   
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 dark:bg-black text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Church Info -->
+            <div class="animate-fade-in">
+                <div class="flex items-center space-x-2 mb-6">
+                    <img src="images/ccdmlogogold.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+                    <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+                </div>
+                <p class="text-gray-300 mb-4">
+                    A place where faith comes alive and community thrives.
+                </p>
+                <div class="flex space-x-4">
+                   <a href="https://www.facebook.com/people/Wakati-Itusile-Texas/100087080105614/" target="_blank" class="social-link transform transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link transform transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                   <a href="https://www.instagram.com/wakatiitusile/" target="_blank" class="social-link transform transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@wakatiitusileusa3581" target="_blank" class="social-link transform transition-transform duration-300 hover:scale-110">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 C. All rights reserved.</p>
+            <!-- Quick Links -->
+            <div class="animate-fade-in delay-200">
+                <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="footer-link transition-colors duration-300 hover:text-primary-400">Home</a></li>
+                    <li><a href="pages/about.html" class="footer-link transition-colors duration-300 hover:text-primary-400">About Us</a></li>
+                    <li><a href="pages/services.html" class="footer-link transition-colors duration-300 hover:text-primary-400">Services</a></li>
+                    <li><a href="pages/events.html" class="footer-link transition-colors duration-300 hover:text-primary-400">Events</a></li>
+                </ul>
+            </div>
+            
+            <!-- Service Times -->
+            <div class="animate-fade-in delay-300">
+                <h3 class="font-semibold text-lg mb-6">Service Times</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li>Sunday Service: 11:00 AM CST</li>
+                    <li>Bible Study: Mon 7:30 PM CST</li>
+                    <li>Prayer Meeting: Wed 7:30 PM CST</li>
+                    <li>Power Night: Fri 10:00 PM CST</li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="animate-fade-in delay-400">
+                <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                        339 Southwestern Blvd (Ste 339) Sugarland Tx 77478
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-primary-400"></i>
+                        +1 (832) 433-4236
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                        info@ccdmtexas.org
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 animate-fade-in delay-500">
+            <p>© 2025 CCDM. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
+    <i class="fas fa-chevron-up"></i>
+</button>
 
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/light-mode.js"></script>
-    <script src="assets/js/animations.js"></script>
-</body>
-</html>
+<!-- JavaScript -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/light-mode.js"></script>
+<script src="assets/js/animations.js"></script>
+
+<!-- Custom CSS for Footer Enhancements -->
+<style>
+    /* Ensure grid layout is robust */
+    .grid-cols-1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .md\:grid-cols-2 {
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .lg\:grid-cols-4 {
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    /* Ensure Contact Info visibility */
+    footer .text-gray-300 {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+
+    /* Micro Animations */
+    .animate-fade-in {
+        opacity: 0;
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+        animation-delay: 0.3s;
+    }
+
+    .delay-400 {
+        animation-delay: 0.4s;
+    }
+
+    .delay-500 {
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Social Link Hover Effect */
+    .social-link {
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-link:hover {
+        color: #facc15; /* Matches primary-400 for consistency */
+    }
+
+    /* Footer Link Hover Effect */
+    .footer-link {
+        transition: color 0.3s ease;
+    }
+
+    /* Ensure no overlap or hidden content */
+    footer > div {
+        position: relative;
+        z-index: 1;
+    }
+</style>

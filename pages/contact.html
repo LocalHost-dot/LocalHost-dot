@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -26,7 +25,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'sans': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
                         'serif': ['Playfair Display', 'serif'],
                         'display': ['Poppins', 'sans-serif']
                     },
@@ -60,60 +59,141 @@
             }
         }
     </script>
+    
+    <!-- Home Page Navigation Styles -->
+    <style>
+        .text-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s ease-in-out infinite;
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-morphism-dark {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+            background-size: 300% 300%;
+            animation: shimmer 3s ease-in-out infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .floating-particles::before,
+        .floating-particles::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(251, 191, 36, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-particles::before {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-particles::after {
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+    </style>
 </head>
 <body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Navigation (Styled like Home Page) -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-morphism transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="../index.html" class="flex items-center space-x-3 group">
-                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <a href="/" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 animate-glow">
                             <img src="../images/CCDM LOGO PDF-1.jpg" alt="Church Logo" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
-                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
+                            <span class="font-display font-bold text-xl text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-300 -mt-1">Deliverance Ministry</span>
                         </div>
                     </a>
                 </div>
-                
+              
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html" class="nav-link">Home</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="events.html" class="nav-link">Events</a>
-                    <a href="contact.html" class="nav-link active">Contact</a>
-                    <a href="donate.html" class="nav-link bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">Donate</a>
+                    <a href="/" class="text-white hover:text-primary-300 transition-colors duration-200 font-medium">Home</a>
+                    <a href="/pages/about.html" class="text-white/80 hover:text-white transition-colors duration-200">About</a>
+                    <a href="/pages/services.html" class="text-white/80 hover:text-white transition-colors duration-200">Services</a>
+                    <a href="/pages/events.html" class="text-white/80 hover:text-white transition-colors duration-200">Events</a>
+                    <a href="/pages/contact.html" class="text-white font-medium active">Contact</a>
+                    <a href="/pages/donate.html" class="glass-morphism text-white px-6 py-2 rounded-full hover:bg-white/20 transition-all duration-200 font-medium">Donate</a>
                 </div>
                 
-                <!-- Dark Mode Toggle & Mobile Menu -->
-                <div class="flex items-center space-x-4">
-                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
-                    </button>
-                    <button id="mobile-menu-button" class="md:hidden p-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition-all duration-300 hover:scale-105 shadow-sm">
-                        <i class="fas fa-bars text-gray-600"></i>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center space-x-4 md:hidden">
+                    <button id="mobile-menu-button" class="glass-morphism p-2 rounded-lg text-white">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
-            </div>
+            </div> <!-- Mobile Menu Button -->
+<div class="flex items-center space-x-4 md:hidden">
+    <button id="mobile-menu-button" class="glass-morphism p-2 rounded-lg text-white">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+<style>
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    z-index: 40;
+}
+#mobile-menu:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon between bars and X
+            const icon = hamburgerBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+});
+</script>
+
             
             <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="../index.html" class="nav-link-mobile">Home</a>
-                    <a href="about.html" class="nav-link-mobile">About</a>
-                    <a href="services.html" class="nav-link-mobile">Services</a>
-                    <a href="events.html" class="nav-link-mobile">Events</a>
-                    <a href="contact.html" class="nav-link-mobile active">Contact</a>
-                    <a href="donate.html" class="nav-link-mobile bg-primary-600 text-white px-4 py-2 rounded-lg text-center">Donate</a>
+            <div id="mobile-menu" class="md:hidden hidden glass-morphism border-t border-white/20 py-4">
+                <div class="flex flex-col space-y-4 px-4">
+                    <a href="/" class="text-white hover:text-primary-300 transition-colors duration-200 font-medium">Home</a>
+                    <a href="/pages/about.html" class="text-white/80 hover:text-white transition-colors duration-200">About</a>
+                    <a href="/pages/services.html" class="text-white/80 hover:text-white transition-colors duration-200">Services</a>
+                    <a href="/pages/events.html" class="text-white/80 hover:text-white transition-colors duration-200">Events</a>
+                    <a href="/pages/contact.html" class="text-white font-medium active">Contact</a>
+                    <a href="/pages/donate.html" class="glass-morphism text-white px-6 py-2 rounded-full hover:bg-white/20 transition-all duration-200 font-medium text-center">Donate</a>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Page Header -->
     <section class="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-primary-900 to-indigo-900 relative overflow-hidden">
@@ -152,13 +232,6 @@
         </div>
     </section>
 
-    <!-- JavaScript -->
-    <script src="../assets/js/navigation.js"></script>
-    <script src="../assets/js/dark-mode.js"></script>
-    <script src="../assets/js/contact.js"></script>
-</body>
-</html>
-
     <!-- Contact Information -->
     <section class="py-20 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,8 +242,8 @@
                         <i class="fas fa-map-marker-alt text-2xl text-primary-600 dark:text-primary-400"></i>
                     </div>
                     <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Visit Us</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-2">333 Southwestern Blvd (Ste 339) </p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Sugarland Tx 774478</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">339 Southwestern Blvd (Ste 339)</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Sugarland, TX 77478</p>
                     <a href="#map" class="text-primary-600 dark:text-primary-400 hover:underline font-semibold">
                         Get Directions
                     </a>
@@ -182,8 +255,8 @@
                     </div>
                     <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Call Us</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-2">Main Office</p>
-                    <p class="text-xl font-semibold text-gray-900 dark:text-white mb-4">(555) 123-4567</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri: 9AM-5PM</p>
+                    <p class="text-xl font-semibold text-gray-900 dark:text-white mb-4">+1 (832) 433-4236</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Mon-Fri: 9AM-5PM CST</p>
                 </div>
                 
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center fade-in">
@@ -192,7 +265,7 @@
                     </div>
                     <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-4">Email Us</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-2">General Inquiries</p>
-                    <a href="mailto:info@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline font-semibold">
+                    <a href="mailto:info@ccdmtexas.org" class="text-primary-600 dark:text-primary-400 hover:underline font-semibold">
                         info@ccdmtexas.org
                     </a>
                     <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">We'll respond within 24 hours</p>
@@ -207,7 +280,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Contact Form -->
                 <div class="fade-in">
-                    <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-Left">
+                    <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-left">
                         Send Us a Message
                     </h2>
                     <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
@@ -305,13 +378,13 @@
                 
                 <!-- Map -->
                 <div class="fade-in">
-                    <h2 class="font-display font-bold text-3xl text-gray-900 mb-6 text-centertext-white mb-6">
+                    <h2 class="font-display font-bold text-3xl text-gray-900 mb-6 text-center">
                         Find Us
                     </h2>
                     <div id="map" class="w-full h-96 bg-gray-300 dark:bg-gray-600 rounded-xl overflow-hidden shadow-lg mb-6">
                         <!-- Google Maps Embed -->
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuMiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.3444631569386!2d-95.62116768489336!3d29.618972982104547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e4c7b8f6f5d3%3A0x7a8e9b0f6b7c8d9e!2s339%20Southwestern%20Blvd%2C%20Sugar%20Land%2C%20TX%2077478%2C%20USA!5e0!3m2!1sen!2sus!4v1698876543210!5m2!1sen!2sus"
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -331,14 +404,14 @@
                                 <i class="fas fa-car text-primary-600 dark:text-primary-400 mt-1 mr-3"></i>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white">Parking</h4>
-                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Free parking available in our main lot and street parking on Faith Street.</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Free parking available in our main lot adjacent to the worship center.</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
                                 <i class="fas fa-bus text-primary-600 dark:text-primary-400 mt-1 mr-3"></i>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 dark:text-white">Public Transit</h4>
-                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Bus routes 15 and 42 stop within two blocks. Metro station is 0.5 miles away.</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Accessible via Fort Bend County Public Transportation routes near Southwestern Blvd.</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -352,207 +425,381 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Service Times -->
-    <section class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
-                    Service Times
+        <!-- Service Times -->
+        <section class="py-20 bg-white dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
+                        Service Times
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        Join us for worship and fellowship throughout the week
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Sunday Service -->
+                    <div class="text-center fade-in">
+                        <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-cross text-3xl text-primary-600 dark:text-primary-400"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Sunday Service</h3>
+                        <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">11:00 AM - 1:30 PM CST</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Main worship service with communion</p>
+                    </div>
+                    
+                    <!-- Bible Study -->
+                    <div class="text-center fade-in">
+                        <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-book-open text-3xl text-primary-600 dark:text-primary-400"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Bible Study</h3>
+                        <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">Monday 7:30 PM - 9:00 PM CST</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Weekly Bible study and discussion</p>
+                    </div>
+                    
+                    <!-- Prayer Meeting -->
+                    <div class="text-center fade-in">
+                        <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-praying-hands text-3xl text-primary-600 dark:text-primary-400"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Prayer Meeting</h3>
+                        <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">Wednesday 7:30 PM - 8:30 PM CST</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Community prayer and intercession</p>
+                    </div>
+                    
+                    <!-- Power Night -->
+                    <div class="text-center fade-in">
+                        <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-bolt text-3xl text-primary-600 dark:text-primary-400"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Power Night</h3>
+                        <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">1st & 3rd Fridays 10:00 PM CST</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Late night worship and prayer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+    <section class="relative py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="decorative-element decorative-element-1"></div>
+        <div class="decorative-element decorative-element-2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20 fade-up">
+                <div class="inline-block mb-4">
+                    <span class="text-indigo-600 text-sm font-semibold tracking-wider uppercase">Leadership</span>
+                </div>
+                <h2 class="font-display font-bold text-5xl lg:text-6xl section-title mb-6">
+                    Our Leadership Team
                 </h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Join us for worship and fellowship throughout the week
+                <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto mb-8"></div>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Meet the dedicated leaders who serve our church community with unwavering passion, 
+                    spiritual wisdom, and complete integrity in their calling to shepherd God's people.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Sunday Service -->
-                <div class="text-center fade-in">
-                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-cross text-3xl text-primary-600 dark:text-primary-400"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Sunday Service</h3>
-                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">11:00 AM - 1:30 PM</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Main worship service with communion</p>
-                </div>
-                
-                <!-- Bible Study -->
-                <div class="text-center fade-in">
-                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-book-open text-3xl text-primary-600 dark:text-primary-400"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Bible Study</h3>
-                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">Monday 7:30 PM - 9:00 PM</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Weekly Bible study and discussion</p>
-                </div>
-                
-                <!-- Prayer Meeting -->
-                <div class="text-center fade-in">
-                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-praying-hands text-3xl text-primary-600 dark:text-primary-400"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Prayer Meeting</h3>
-                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">Wednesday 7:30 PM - 8:30 PM</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Community prayer and intercession</p>
-                </div>
-                
-                <!-- Power Night -->
-                <div class="text-center fade-in">
-                    <div class="w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-bolt text-3xl text-primary-600 dark:text-primary-400"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 dark:text-white mb-2">Power Night</h3>
-                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg mb-2">1st & 3rd Fridays 10:00 PM</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Late night worship and prayer</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Staff Contact -->
-    <section class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
-                    Connect with Our Team
-                </h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Our pastoral team is here to serve you and answer any questions you may have
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Leadership Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10">
+               
                 <!-- Senior Pastor -->
-               <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-lg fade-in">
-        <div class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-2xl mx-auto mb-8 flex items-center justify-center overflow-hidden">
-            <img src="../images/Ven3.jpg" alt="Ven. Tunde Bamigboye" class="w-full h-full object-cover object-center rounded-2xl">
-        </div>
-                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">Ven. Tunde Bamigboye</h3>
-                    <p class="text-primary-600 dark:text-primary-400 font-semibold mb-3">President CCDM Global</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Available for pastoral care, counseling, and spiritual guidance.</p>
-                    <a href="mailto:pastor@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline">
-                        info@ccdmtexas.org
-                    </a>
+                <div class="leadership-card relative rounded-2xl p-8 text-center fade-up">
+                    <div class="image-container w-56 h-56 mx-auto mb-8 rounded-3xl overflow-hidden">
+                        <img src="../images/Ven4.jpg" alt="Ven. Tunde Bamigboye" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="role-badge">President CCDM Global</div>
+                    <h3 class="font-display font-bold text-2xl text-slate-900 mb-4">
+                        Ven. Tunde Bamigboye
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Available for Pastoral Care, Couseling, and spiritual guidance </p>
+                    <a href="mailtoinfo@ccdmglobal.org" class="text-primary-600 dark:text-primary-400 hover: underline"></a>
+                        info@ccdmglobal.org
+                </div>
+                 
+                <!-- Vice President -->
+                <div class="leadership-card relative rounded-2xl p-8 text-center fade-up">
+                    <div class="image-container w-56 h-56 mx-auto mb-8 rounded-3xl overflow-hidden">
+                        <img src="../images/yomi.png" alt="Evangelist Yomi Bamigboye" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="role-badge">V. President CCDM Global</div>
+                    <h3 class="font-display font-bold text-2xl text-slate-900 mb-4">
+                        Evangelist Yomi Bamigboye
+                    </h3>
+                      <p class="text-slate-600 text-sm leading-relaxed">
+                        Available for Pastoral Care, Couseling, and spiritual guidance </p>
+                    <a href="mailtoinfo@ccdmglobal.org" class="text-primary-600 dark:text-primary-400 hover: underline"></a>
+                        info@ccdmglobal.org
                 </div>
                 
-                <!-- Associate Pastor -->
-                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-lg fade-in">
-        <div class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-2xl mx-auto mb-8 flex items-center justify-center overflow-hidden">
-            <img src="../images/Olu5.jpg" alt="Revd. Samuel Olukosi" class="w-full h-full object-cover object-center rounded-2xl">
-        </div>
-                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">Revd. Samuel Olukosi</h3>
-                    <p class="text-primary-600 dark:text-primary-400 font-semibold mb-3">Pastor In Charge</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Oversees ministries, outreach, and community programs.</p>
-                    <a href="mailto:sarah@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline">
-                        info@ccdmtexas.org
-                    </a>
+                <!-- Pastor In Charge -->
+                <div class="leadership-card relative rounded-2xl p-8 text-center fade-up">
+                    <div class="image-container w-56 h-56 mx-auto mb-8 rounded-3xl overflow-hidden">
+                        <img src="../images/Olu6.png" alt="Revd. Samuel Olukosi" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="role-badge">Pastor In Charge</div>
+                    <h3 class="font-display font-bold text-2xl text-slate-900 mb-4">
+                        Revd. Samuel Olukosi
+                    </h3>
+                      <p class="text-slate-600 text-sm leading-relaxed">
+                        Oversees ministries, outreach, and community progress. </p>
+                    <a href="mailtosamuel.olukosi@ccdmtexas.org" class="text-primary-600 dark:text-primary-400 hover: underline"></a>
+                        samuel.olukosi@ccdmtexas.org</a>
                 </div>
                 
-                <!-- Office Manager -->
-                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-lg fade-in">
-        <div class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-2xl mx-auto mb-8 flex items-center justify-center overflow-hidden">
-            <img src="../images/Wife.jpg" alt="Dns Abigail Olukosi" class="w-full h-full object-cover object-center rounded-2xl">
-        </div>
-                    <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-2">Dns Abigail Olukosi</h3>
-                    <p class="text-primary-600 dark:text-primary-400 font-semibold mb-3">Office Manager</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">General inquiries, event coordination, and administrative support.</p>
-                    <a href="mailto:office@gracechurch.com" class="text-primary-600 dark:text-primary-400 hover:underline">
-                        info@ccdmtexas.org
-                    </a>
+                <!-- First Lady -->
+                <div class="leadership-card relative rounded-2xl p-8 text-center fade-up">
+                    <div class="image-container w-56 h-56 mx-auto mb-8 rounded-3xl overflow-hidden">
+                        <img src="../images/wife1.jpg" alt="Evangelist Abigail Olukosi" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="role-badge">CCDM Texas First Lady</div>
+                    <h3 class="font-display font-bold text-2xl text-slate-900 mb-4">
+                        Evangelist Abigail Olukosi
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        General Inquires, event cordination, and adminitrative support.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+</body>
+</html>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-               <!-- Church Info -->
-<div>
-    <div class="flex items-center space-x-2 mb-6">
-        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
-        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
-    </div>
-    <p class="text-gray-300 mb-4">
-        A place where faith comes alive and community thrives.
-    </p>
-    <div class="flex space-x-4">
-        <a href="#" class="social-link">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </div>
-</div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="../index.html" class="footer-link">Home</a></li>
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="services.html" class="footer-link">Services</a></li>
-                        <li><a href="events.html" class="footer-link">Events</a></li>
-                    </ul>
+
+
+   
+    <style>
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        
+        .leadership-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        
+        .leadership-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+        
+        .leadership-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .leadership-card:hover::before {
+            opacity: 1;
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(99, 102, 241, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .leadership-card:hover .image-container::after {
+            opacity: 1;
+        }
+        
+        .image-container img {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .leadership-card:hover .image-container img {
+            transform: scale(1.05);
+        }
+        
+        .role-badge {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .fade-up:nth-child(1) { animation-delay: 0.1s; }
+        .fade-up:nth-child(2) { animation-delay: 0.2s; }
+        .fade-up:nth-child(3) { animation-delay: 0.3s; }
+        .fade-up:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .decorative-element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 50%;
+            filter: blur(20px);
+        }
+        
+        .decorative-element-1 {
+            top: 10%;
+            left: 5%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .decorative-element-2 {
+            bottom: 20%;
+            right: 10%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body class="font-body">
+        </section>
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <!-- Footer -->
+        <footer class="bg-gray-900 dark:bg-black text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Church Info -->
+                    <div>
+                        <div class="flex items-center space-x-2 mb-6">
+                            <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+                            <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A place where faith comes alive and community thrives.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-link transform transition-transform duration-300 hover:scale-110">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link transform transition-transform duration-300 hover:scale-110">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link transform transition-transform duration-300 hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@wakatiitusileusa3581" target="_blank" class="social-link transform transition-transform duration-300 hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li><a href="/" class="footer-link transition-colors duration-300 hover:text-primary-400">Home</a></li>
+                            <li><a href="/pages/about.html" class="footer-link transition-colors duration-300 hover:text-primary-400">About Us</a></li>
+                            <li><a href="/pages/services.html" class="footer-link transition-colors duration-300 hover:text-primary-400">Services</a></li>
+                            <li><a href="/pages/events.html" class="footer-link transition-colors duration-300 hover:text-primary-400">Events</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Service Times -->
+                    <div>
+                        <h3 class="font-semibold text-lg mb-6">Service Times</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Sunday Service: 11:00 AM</li>
+                            <li>Bible Study: Mon 7:30 PM</li>
+                            <li>Prayer Meeting: Wed 7:30 PM</li>
+                            <li>Power Night: Fri 10:00 PM</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
+                                339 Southwestern Blvd (Ste 339) Sugarland Tx 77478
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone mr-3 text-primary-400"></i>
+                                +1 (832) 433-4236
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-3 text-primary-400"></i>
+                                info@ccdmtexas.org
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <!-- Service Times -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-6">Service Times</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>Sunday Service: 11:00 AM</li>
-                        <li>Bible Study: Mon 7:30 PM</li>
-                        <li>Prayer Meeting: Wed 7:30 PM</li>
-                        <li>Power Night: Fri 10:00 PM</li>
-                    </ul>
-                </div>
-                
-                         <!-- Contact Info -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
-                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-primary-400"></i>
-                            (555) 123-4567
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-primary-400"></i>
-                            info@ccdmtexas.org
-                        </li>
-                    </ul>
+                <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                    <p>© 2025 CCDM. All rights reserved.</p>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 C. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform scale-0 opacity-0">
+            <i class="fas fa-chevron-up"></i>
+        </button>
 
-    <!-- JavaScript -->
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/navigation.js"></script>
-    <script src="../assets/js/dark-mode.js"></script>
-    <script src="../assets/js/animations.js"></script>
-    <script src="../assets/js/contact.js"></script>
+        <!-- JavaScript -->
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/js/navigation.js"></script>
+        <script src="../assets/js/dark-mode.js"></script>
+        <script src="../assets/js/animations.js"></script>
+        <script src="../assets/js/contact.js"></script>
 </body>
 </html>

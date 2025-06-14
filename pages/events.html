@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -26,7 +25,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'sans': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
                         'serif': ['Playfair Display', 'serif'],
                         'display': ['Poppins', 'sans-serif']
                     },
@@ -60,60 +59,134 @@
             }
         }
     </script>
+    
+    <!-- Home Page Navigation Styles -->
+    <style>
+        .text-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s ease-in-out infinite;
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-morphism-dark {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706, #fbbf24);
+            background-size: 300% 300%;
+            animation: shimmer 3s ease-in-out infinite;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .floating-particles::before,
+        .floating-particles::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(251, 191, 36, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-particles::before {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-particles::after {
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+    </style>
 </head>
 <body class="font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Navigation (Styled like Home Page) -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-morphism transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="../index.html" class="flex items-center space-x-3 group">
-                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <a href="/" class="flex items-center space-x-3 group">
+                        <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 animate-glow">
                             <img src="../images/CCDM LOGO PDF-1.jpg" alt="Church Logo" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col">
-                            <span class="font-display font-bold text-xl text-gray-900 dark:text-white">Christ Covenant</span>
-                            <span class="font-display font-medium text-sm text-primary-600 dark:text-primary-400 -mt-1">Deliverance Ministry</span>
+                            <span class="font-display font-bold text-xl text-white">Christ Covenant</span>
+                            <span class="font-display font-medium text-sm text-primary-300 -mt-1">Deliverance Ministry</span>
                         </div>
                     </a>
                 </div>
-                
+              
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html" class="nav-link">Home</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="events.html" class="nav-link active">Events</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="donate.html" class="nav-link bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">Donate</a>
+                    <a href="/" class="text-white hover:text-primary-300 transition-colors duration-200 font-medium">Home</a>
+                    <a href="/pages/about.html" class="text-white/80 hover:text-white transition-colors duration-200">About</a>
+                    <a href="/pages/services.html" class="text-white/80 hover:text-white transition-colors duration-200">Services</a>
+                    <a href="/pages/events.html" class="text-white font-medium active">Events</a>
+                    <a href="/pages/contact.html" class="text-white/80 hover:text-white transition-colors duration-200">Contact</a>
+                    <a href="/pages/donate.html" class="glass-morphism text-white px-6 py-2 rounded-full hover:bg-white/20 transition-all duration-200 font-medium">Donate</a>
                 </div>
                 
-                <!-- Dark Mode Toggle & Mobile Menu -->
-                <div class="flex items-center space-x-4">
-                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
-                    </button>
-                    <button id="mobile-menu-button" class="md:hidden p-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition-all duration-300 hover:scale-105 shadow-sm">
-                        <i class="fas fa-bars text-gray-600"></i>
-                    </button>
-                </div>
+                <<!-- Mobile Menu Button -->
+<div class="flex items-center space-x-4 md:hidden">
+    <button id="mobile-menu-button" class="glass-morphism p-2 rounded-lg text-white">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+<style>
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    z-index: 40;
+}
+#mobile-menu:not(.hidden) {
+    display: flex;
+    flex-direction: column;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon between bars and X
+            const icon = hamburgerBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    }
+});
+</script>
             </div>
-            
             <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="../index.html" class="nav-link-mobile">Home</a>
-                    <a href="about.html" class="nav-link-mobile">About</a>
-                    <a href="services.html" class="nav-link-mobile">Services</a>
-                    <a href="events.html" class="nav-link-mobile active">Events</a>
-                    <a href="contact.html" class="nav-link-mobile">Contact</a>
-                    <a href="donate.html" class="nav-link-mobile bg-primary-600 text-white px-4 py-2 rounded-lg text-center">Donate</a>
+            <div id="mobile-menu" class="md:hidden hidden glass-morphism border-t border-white/20 py-4">
+                <div class="flex flex-col space-y-4 px-4">
+                    <a href="/" class="text-white hover:text-primary-300 transition-colors duration-200 font-medium">Home</a>
+                    <a href="/pages/about.html" class="text-white/80 hover:text-white transition-colors duration-200">About</a>
+                    <a href="/pages/services.html" class="text-white/80 hover:text-white transition-colors duration-200">Services</a>
+                    <a href="/pages/events.html" class="text-white font-medium active">Events</a>
+                    <a href="/pages/contact.html" class="text-white/80 hover:text-white transition-colors duration-200">Contact</a>
+                    <a href="/pages/donate.html" class="glass-morphism text-white px-6 py-2 rounded-full hover:bg-white/20 transition-all duration-200 font-medium text-center">Donate</a>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Page Header -->
     <section class="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-primary-900 to-indigo-900 relative overflow-hidden">
@@ -152,13 +225,6 @@
         </div>
     </section>
 
-    <!-- JavaScript -->
-    <script src="../assets/js/navigation.js"></script>
-    <script src="../assets/js/dark-mode.js"></script>
-</body>
-</html>
-
-
     <!-- Event Filters -->
     <section class="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,54 +247,503 @@
             </div>
         </div>
     </section>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Events Section</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .font-display {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        
+        /* Primary colors - assuming your primary is a blue/purple tone */
+        .text-primary-600 { color: #7c3aed; }
+        .text-primary-400 { color: #a78bfa; }
+        .bg-primary-600 { background-color: #7c3aed; }
+        .bg-primary-700 { background-color: #6d28d9; }
+        .border-primary-200 { border-color: #e9d5ff; }
+        .bg-primary-50 { background-color: #faf5ff; }
+        .bg-primary-100 { background-color: #f3e8ff; }
+        
+        /* Featured Events Section */
+        .featured-events {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-events::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23f1f5f9" opacity="0.3"/><circle cx="75" cy="75" r="1" fill="%23e2e8f0" opacity="0.2"/><circle cx="50" cy="10" r="0.5" fill="%23cbd5e1" opacity="0.4"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #7c3aed, #a78bfa);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            font-weight: 400;
+        }
+        
+        .event-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.08),
+                0 0 0 1px rgba(255, 255, 255, 0.8);
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7c3aed, #a78bfa, #7c3aed);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: 200% 0; }
+            50% { background-position: -200% 0; }
+        }
+        
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 35px 60px -12px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(255, 255, 255, 0.9);
+        }
+        
+        .event-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+        }
+        
+        .event-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .event-card:hover .event-image img {
+            transform: scale(1.05);
+        }
+        
+        .event-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+        }
+        
+        .event-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .event-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+            color: #7c3aed;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            border: 1px solid #e9d5ff;
+            width: fit-content;
+        }
+        
+        .event-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .event-description {
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .event-details {
+            margin-bottom: 2rem;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #475569;
+            font-weight: 500;
+        }
+        
+        .detail-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+            color: #7c3aed;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            border: 1px solid #e9d5ff;
+        }
+        
+        /* Countdown Timer */
+        .countdown-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #faf5ff, #f8fafc);
+            border-radius: 16px;
+            border: 1px solid #e9d5ff;
+        }
+        
+        .countdown-title {
+            text-align: center;
+            color: #7c3aed;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .countdown-item {
+            text-align: center;
+            background: white;
+            padding: 1rem 0.75rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            min-width: 60px;
+        }
+        
+        .countdown-number {
+            display: block;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.25rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px 0 rgba(124, 58, 237, 0.4);
+        }
+        
+        .cta-button i {
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover i {
+            transform: translateX(3px);
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .featured-events {
+                padding: 3rem 0;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .event-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .event-content {
+                padding: 2rem;
+            }
+            
+            .event-title {
+                font-size: 2rem;
+            }
+            
+            .countdown-timer {
+                gap: 0.5rem;
+            }
+            
+            .countdown-item {
+                padding: 0.75rem 0.5rem;
+                min-width: 50px;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
     <!-- Featured Upcoming Event -->
-    <section class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="font-display font-bold text-5xl text-gray-900 mb-6 text-center">
-                    Featured Event
-                </h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300">Don't miss our next special gathering</p>
+    <section class="featured-events">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title font-display">Featured Event</h2>
+                <p class="section-subtitle">Don't miss our next special gathering</p>
             </div>
             
-           <div class="max-w-4xl mx-auto">
-            <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-2xl fade-in">
-                <div class="md:flex">
-                    <div class="md:w-1/2">
-                        <img src="../images/Pilgrimage_to_jordan_&_israel.jpg" 
-                             alt="Country Flag" 
-                             class="w-full h-64 md:h-full object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8">
-                            <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">SPECIAL EVENT</div>
-                            <h3 class="font-serif text-3xl font-bold text-gray-900 dark:text-white mb-4">Pilgrimage to Israel & Jordan</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                                Join us for a Miraculous Pilgrimage to Israel & Jordan, Visit the Holy sites Such Mount Zion, Garden Tomb, Upper Room & Rekindle your Fire & Passion for Jesus.
-                            </p>
-                            <div class="space-y-3 mb-6">
-                                <div class="flex items-center text-gray-600 dark:text-gray-300">
-                                    <i class="fas fa-calendar-alt text-primary-600 dark:text-primary-400 mr-3"></i>
-                                    <span>September 24, 2025</span>
+            <div class="event-card fade-in">
+                <div class="event-layout">
+                    <div class="event-image">
+                        <img src="/images/Pilgrimage_to_jordan_&_israel.jpg" alt="Pilgrimage to Israel & Jordan" />
+                    </div>
+                    
+                    <div class="event-content">
+                        <div class="event-badge">Special Event</div>
+                        
+                        <h3 class="event-title font-serif">Pilgrimage to Israel & Jordan</h3>
+                        
+                        <p class="event-description">
+                            Join us for a Miraculous Pilgrimage to Israel & Jordan. Visit the Holy sites such as Mount Zion, Garden Tomb, Upper Room & Rekindle your Fire & Passion for Jesus.
+                        </p>
+                        
+                        <div class="countdown-section">
+                            <div class="countdown-title">Event Starts In</div>
+                            <div class="countdown-timer" id="countdown">
+                                <div class="countdown-item">
+                                    <span class="countdown-number" id="days">0</span>
+                                    <span class="countdown-label">Days</span>
                                 </div>
-                                <div class="flex items-center text-gray-600 dark:text-gray-300">
-                                    <i class="fas fa-clock text-primary-600 dark:text-primary-400 mr-3"></i>
-                                    <span>00:00 PM - 00:00 PM</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-number" id="hours">0</span>
+                                    <span class="countdown-label">Hours</span>
                                 </div>
-                                <div class="flex items-center text-gray-600 dark:text-gray-300">
-                                    <i class="fas fa-map-marker-alt text-primary-600 dark:text-primary-400 mr-3"></i>
-                                    <span>Main Sanctuary</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-number" id="minutes">0</span>
+                                    <span class="countdown-label">Minutes</span>
+                                </div>
+                                <div class="countdown-item">
+                                    <span class="countdown-number" id="seconds">0</span>
+                                    <span class="countdown-label">Seconds</span>
                                 </div>
                             </div>
-                            <button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                                Learn More
-                            </button>
                         </div>
+                        
+                        <div class="event-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <span>September 24, 2025</span>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span>6:00 AM - 11:00 PM</span>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span>Jerusalem & Amman</span>
+                            </div>
+                        </div>
+                        
+                        <button class="cta-button">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+        // Countdown Timer Function
+        function updateCountdown() {
+            const eventDate = new Date('2025-09-24T06:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                // Event has passed
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                
+                document.querySelector('.countdown-title').textContent = 'Event Has Started!';
+            }
+        }
+        
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Smooth scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
 
     <!-- Events Calendar -->
     <section class="py-20 bg-white dark:bg-gray-900">
@@ -246,19 +761,19 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Event 1 -->
                 <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
-    <div class="relative">
-        <img src="../images/the_God_of.jpg" 
-             alt="Worship Night" 
-             class="w-full h-48 object-cover">
+                    <div class="relative">
+                        <img src="../images/the_God_of.jpg" 
+                             alt="Worship Night" 
+                             class="w-full h-48 object-cover">
                         <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             22nd-25th May, 2025
                         </div>
                     </div>
                     <div class="p-6">
-                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">3 Years Annivasary</div>
+                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">3 Years Anniversary</div>
                         <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">The God of all Possibilities</h3>
                         <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                            Welcome All to Our Special 3 Years Annivasary Program.
+                            Welcome All to Our Special 3 Years Anniversary Program.
                         </p>
                         <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
                             <span><i class="fas fa-clock mr-1"></i> 7:30 PM</span>
@@ -272,10 +787,10 @@
                 
                 <!-- Event 2 -->
                 <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
-    <div class="relative">
-        <img src="../images/Comanding_the_month.jpg" 
-             alt="Worship Night" 
-             class="w-full h-48 object-cover">
+                    <div class="relative">
+                        <img src="../images/Comanding_the_month.jpg" 
+                             alt="Worship Night" 
+                             class="w-full h-48 object-cover">
                         <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             1st 3 Days of the Month
                         </div>
@@ -298,22 +813,22 @@
                 
                 <!-- Event 3 -->
                 <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
-    <div class="relative">
-        <img src="../images/Night_of_hyms.jpg" 
-             alt="Worship Night" 
-             class="w-full h-48 object-cover">
+                    <div class="relative">
+                        <img src="../images/Night_of_hyms.jpg" 
+                             alt="Worship Night" 
+                             class="w-full h-48 object-cover">
                         <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             12th Oct. 2024
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="text-sm text-orange-600 dark:text-orange-400 font-semibold mb-2">COMMUNITY SERVICE</div>
-                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Night of hymns</h3>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">Night of Hymns</h3>
                         <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
                             FEATURING: Hymns, Worship, Praise, Word, & Salvation.
                         </p>
                         <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
-                            <span><i class="fas fa-clock mr-1"></i> 7:00 PM - 9PM CST </span>
+                            <span><i class="fas fa-clock mr-1"></i> 7:00 PM - 9PM CST</span>
                             <span><i class="fas fa-music mr-1"></i> Musical</span>
                         </div>
                         <button class="w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-900 dark:text-white py-2 rounded-lg transition-colors event-details-btn">
@@ -324,10 +839,10 @@
                 
                 <!-- Event 4 -->
                 <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
-    <div class="relative">
-        <img src="../images/SuperSunday.jpg" 
-             alt="Worship Night" 
-             class="w-full h-48 object-cover">
+                    <div class="relative">
+                        <img src="../images/SuperSunday.jpg" 
+                             alt="Worship Night" 
+                             class="w-full h-48 object-cover">
                         <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             Jul 28
                         </div>
@@ -350,19 +865,19 @@
                 
                 <!-- Event 5 -->
                 <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
-    <div class="relative">
-        <img src="../images/My_season_of_Plesaant_surprises.jpg" 
-             alt="Worship Night" 
-             class="w-full h-48 object-cover">
+                    <div class="relative">
+                        <img src="../images/My_season_of_Plesaant_surprises.jpg" 
+                             alt="Worship Night" 
+                             class="w-full h-48 object-cover">
                         <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             13th May - 19th May 24
                         </div>
                     </div>
                     <div class="p-6">
-                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">2ND Year Annivesary</div>
-                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">My season of Plesaant surprises</h3>
+                        <div class="text-sm text-primary-600 dark:text-primary-400 font-semibold mb-2">2ND Year Anniversary</div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-3">My Season of Pleasant Surprises</h3>
                         <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                            Welcome all to our 2nd Year Annivesary Special Program.
+                            Welcome all to our 2nd Year Anniversary Special Program.
                         </p>
                         <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
                             <span><i class="fas fa-clock mr-1"></i> Mon - Fri 7:30 PM</span>
@@ -375,11 +890,11 @@
                 </div>
                 
                 <!-- Event 6 -->
-               <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
-    <div class="relative">
-        <img src="../images/Vigil_PowerNight.jpg" 
-             alt="Worship Night" 
-             class="w-full h-48 object-cover">
+                <div class="event-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 fade-in" data-category="worship">
+                    <div class="relative">
+                        <img src="../images/Vigil_PowerNight.jpg" 
+                             alt="Worship Night" 
+                             class="w-full h-48 object-cover">
                         <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             Jan 1
                         </div>
@@ -450,39 +965,39 @@
     <footer class="bg-gray-900 dark:bg-black text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-               <!-- Church Info -->
-<div>
-    <div class="flex items-center space-x-2 mb-6">
-        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
-        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
-    </div>
-    <p class="text-gray-300 mb-4">
-        A place where faith comes alive and community thrives.
-    </p>
-    <div class="flex space-x-4">
-        <a href="#" class="social-link">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="social-link">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </div>
-</div>
+                <!-- Church Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="../images/Logo2.png" alt="Wakati Itusile USA Logo" class="h-10 w-auto">
+                        <span class="font-serif font-bold text-xl">CCDM Texas Worship Center</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        A place where faith comes alive and community thrives.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-link transform transition-transform duration-300 hover:scale-110">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link transform transition-transform duration-300 hover:scale-110">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link transform transition-transform duration-300 hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@wakatiitusileusa3581" target="_blank" class="social-link transform transition-transform duration-300 hover:scale-110">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
                 
                 <!-- Quick Links -->
                 <div>
                     <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
                     <ul class="space-y-3">
-                        <li><a href="../index.html" class="footer-link">Home</a></li>
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="services.html" class="footer-link">Services</a></li>
-                        <li><a href="events.html" class="footer-link">Events</a></li>
+                        <li><a href="/" class="footer-link transition-colors duration-300 hover:text-primary-400">Home</a></li>
+                        <li><a href="/pages/about.html" class="footer-link transition-colors duration-300 hover:text-primary-400">About Us</a></li>
+                        <li><a href="/pages/services.html" class="footer-link transition-colors duration-300 hover:text-primary-400">Services</a></li>
+                        <li><a href="/pages/events.html" class="footer-link transition-colors duration-300 hover:text-primary-400">Events</a></li>
                     </ul>
                 </div>
                 
@@ -497,17 +1012,17 @@
                     </ul>
                 </div>
                 
-                          <!-- Contact Info -->
+                <!-- Contact Info -->
                 <div>
                     <h3 class="font-semibold text-lg mb-6">Contact Info</h3>
                     <ul class="space-y-3 text-gray-300">
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-3 text-primary-400"></i>
-                            333 Southwestern Blvd (Ste 339) Sugarland Tx 774478
+                            339 Southwestern Blvd (Ste 339) Sugarland Tx 77478
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-3 text-primary-400"></i>
-                            (555) 123-4567
+                            +1 (832) 433-4236
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-primary-400"></i>
@@ -518,7 +1033,7 @@
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 C. All rights reserved.</p>
+                <p>© 2025 CCDM. All rights reserved.</p>
             </div>
         </div>
     </footer>
